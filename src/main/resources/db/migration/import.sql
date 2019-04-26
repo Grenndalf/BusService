@@ -46,3 +46,12 @@ INSERT INTO `someNewNameOfDataBase`.`bus_traveler` (`bus_id`, `traveler_id`) VAL
 INSERT INTO `someNewNameOfDataBase`.`bus_traveler` (`bus_id`, `traveler_id`) VALUES ('3', '5');
 INSERT INTO `someNewNameOfDataBase`.`bus_traveler` (`bus_id`, `traveler_id`) VALUES ('3', '2');
 INSERT INTO `someNewNameOfDataBase`.`bus` (`travel_date`, `end_point_id`, `start_point_id`) VALUES ('2019-04-24', '2', '3');
+UPDATE `someNewNameOfDataBase`.`bus` SET `departure_time`='12:00:00' WHERE `id`='3';
+UPDATE `someNewNameOfDataBase`.`bus` SET `departure_time`='13:20' WHERE `id`='4';
+UPDATE `someNewNameOfDataBase`.`bus` SET `departure_time`='14:20', `travel_date`='2019-04-29' WHERE `id`='1';
+UPDATE `someNewNameOfDataBase`.`bus` SET `departure_time`='15:20', `travel_date`='2019-04-27' WHERE `id`='2';
+UPDATE `someNewNameOfDataBase`.`bus` SET `departure_time`='09:50' WHERE `id`='5';
+UPDATE `someNewNameOfDataBase`.`bus` SET `departure_time`='10:50', `travel_date`='2019-04-29' WHERE `id`='6';
+INSERT INTO `someNewNameOfDataBase`.`bus` (`id`, `departure_time`, `travel_date`, `end_point_id`, `start_point_id`) VALUES ('7', '23:50', '2019-04-29', '4', '1');
+UPDATE `someNewNameOfDataBase`.`bus` SET `departure_time`='12:00' WHERE `id`='3';
+INSERT INTO `someNewNameOfDataBase`.`bus` (`id`, `departure_time`, `travel_date`, `end_point_id`, `start_point_id`) VALUES ('8', '12:20', '2019-04-26', '1', '4');

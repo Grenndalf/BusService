@@ -1,11 +1,25 @@
 package pl.spring.finalProject.DTOs;
 
-public class RailwaysDTO {
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
+public class RailwaysDTO {
+    @NotNull
+    @NotBlank
     private String City;
+    @NotNull
+    @NotBlank
     private String RailwayAddress;
 
     public RailwaysDTO() {
+    }
+
+    @Override
+    public String toString() {
+        return "RailwaysDTO{" +
+                "City='" + City + '\'' +
+                ", RailwayAddress='" + RailwayAddress + '\'' +
+                '}';
     }
 
     public String getCity() {

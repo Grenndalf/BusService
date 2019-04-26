@@ -22,8 +22,8 @@ public class Ticket {
     @JoinColumn(name = "travelDestination")
     private Railways destinationPlace;
     @Future
-
     private LocalDate travelDate;
+    @Future
     private LocalTime travelTime;
     @ManyToOne
     @JoinColumn(name = "ticketOwner")

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.Future;
 import javax.validation.constraints.Size;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -35,7 +36,7 @@ public class Bus {
     @JoinTable(name = "Bus_Traveler", joinColumns = @JoinColumn(name = "Bus_Id"),
             inverseJoinColumns = @JoinColumn(name = "Traveler_Id"))
     private List<Traveler> travelerList;
-
+    @Future
     @JsonFormat (pattern = "HH:mm")
     @DateTimeFormat(pattern = "HH:mm")
     private LocalTime departureTime;

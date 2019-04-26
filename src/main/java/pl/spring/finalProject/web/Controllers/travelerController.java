@@ -17,11 +17,8 @@ public class travelerController {
     @CrossOrigin
     @RequestMapping (value = "/saveTraveler", method = RequestMethod.POST)
     public void postSample(@Valid @RequestBody TravelerDTO travelerDTO) {
-
-
         System.out.println(travelerDTO);
         travelerService.saveNewTraveler(travelerDTO);
-        System.out.println("job Done");
 
     }
 }

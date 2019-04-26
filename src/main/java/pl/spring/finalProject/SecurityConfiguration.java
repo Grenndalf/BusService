@@ -49,7 +49,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/searchConnections").authenticated()
                 .antMatchers("/searchConnections").hasAnyRole("ADMIN","USER")
                 .antMatchers("/admin", "/admin/**").hasRole("ADMIN")
-                .antMatchers("/core").permitAll()
+                .antMatchers("/register").permitAll()
                 .anyRequest().permitAll()
                     .and()
                         .formLogin()

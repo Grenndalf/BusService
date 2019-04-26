@@ -1,9 +1,6 @@
 package pl.spring.finalProject.web.Controllers;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pl.spring.finalProject.DTOs.BusDTO;
 import pl.spring.finalProject.Services.BusService;
 import pl.spring.finalProject.Services.RailwaysService;
@@ -24,12 +21,12 @@ public class BusController {
     }
 
     @CrossOrigin
-    @RequestMapping(name = "/getConnections")
+    @RequestMapping("/getConnections")
     public List<BusDTO> getConnections(@Valid @RequestBody BusDTO busDTO) {
         Railways start = railwaysService.findRailwaysBasedOnRailwayDTO(busDTO.getStartPoint());
         Railways end = railwaysService.findRailwaysBasedOnRailwayDTO(busDTO.getEndPoint());
         String day = busDTO.getTravelDate().toString();
+        System.out.println(busService.getBusDTOS(start, end, day));
         return busService.getBusDTOS(start,end,day);
-
     }
 }

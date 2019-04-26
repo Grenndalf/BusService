@@ -1,4 +1,14 @@
+
 $(function () {
+
+    function resetTr() {
+        let trToRemove = $('#results tr').siblings('tr')
+        trToRemove.each(function () {
+            if ($(this).attr('id') != "header") {
+                $(this).remove()
+            }
+        })
+    };
 
     function getSelectedEndPoint() {
         return $(':selected')[1];
@@ -59,12 +69,13 @@ $(function () {
         minDate: 0,
         maxDate: 100,
         dateFormat: 'dd/mm/yy'
-    });
+    }).datepicker("setDate", new Date());
 
     ajaxDropdownList2()
-    ajaxDropdownList()
 
+    ajaxDropdownList()
     $('#DestinationPointList').selectmenu({ width : 400});
+
     $('#StartPointList').selectmenu({ width : 400});
 
     $('#sendMe').submit(function (e) {
@@ -84,11 +95,39 @@ $(function () {
                     "railwayAddress":getRailwayAddress(endPoint)},
                 "travelDate":getVal($('#TravelDate'))
             })
-        }).done(function (q) {
-            console.log(q)
+        }).done(function (e) {
+             resetTr()
+            console.log(e)
+            e.forEach(function (f) {
+                const row = $("<tr>", {
+                        class: "result",
+                    });
+                const column1 = $("<td>",{
+                        class: "departure",
+                        text: f.startPoint.city + " " + f.startPoint.railwayAddress
+                    });
+                const column2 = $("<td>",{
+                        class: "arrivalTo",
+                        text: f.endPoint.city + " " + f.endPoint.railwayAddress
+                    })
+                const column3 = $("<td>",{
+                        class: "TravelDay",
+                        text: f.travelDate
+                    })
+                const column4 = $("<td>",{
+                        class: "TravelDay",
+                        text: f.departureTime
+                    })
+                $('#results').append(row.append(column1).append(column2).append(column3).append(column4))
+            });
+
+        }).fail(function (e) {
+            console.log(e)
         })
     })
+
     $('#test').click(function () {
+        console.log("hello")
     })
 
 });
