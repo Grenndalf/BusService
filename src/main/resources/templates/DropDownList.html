@@ -1,0 +1,82 @@
+<html lang="en" xmlns:th="http://www.springframework.org/schema/mvc">
+<head>
+    <meta charset="utf-8">
+    <title>selectmenu demo</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-lightness/jquery-ui.css"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        #labelBreak {
+            padding-left: 4em;
+        }
+        .ui-datepicker {
+            background: lightyellow;
+        }
+
+        .topText {
+            height: 200px;
+            background-color: rgba(0, 0, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 100px;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+<div class="topText">search for connections</div>
+<form id="sendMe">
+    <label><b>Travel from:</b></label>
+    <select id="StartPointList">
+        <option disabled="true">Select start Point</option>
+    </select>
+    <label id="labelBreak"><b>Travel To:</b></label>
+    <select id="DestinationPointList">
+        <option disabled="true">Select destination Point</option>
+    </select>
+    <label>Travel Day:</label>
+    <input type="text" id="TravelDate" autocomplete="off">
+    <button class="btn btn-primary">Submit</button>
+</form>
+<table class="table table-striped">
+    <thead class="thead-dark">
+    <tr id="header">
+        <th>Bus Description</th>
+        <th>Departure Railway Station</th>
+        <th>Target Railway Station </th>
+        <th>Date</th>
+        <th>Departure Time</th>
+    </tr>
+    <tr>
+        <td>a</td>
+        <td>b</td>
+        <td>b</td>
+        <td>d</td>
+        <td>e</td>
+    </tr>
+    <tr>
+        <td>a</td>
+        <td>b</td>
+        <td>b</td>
+        <td>d</td>
+        <td>e</td>
+    </tr>
+</table>
+<button id="test">abc</button>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="application/javascript" src="../static/js/DropDown.js"></script>
+</body>
+</html>

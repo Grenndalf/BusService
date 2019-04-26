@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.springframework.org/schema/jdbc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/jdbc ">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Spinner functionality</title>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <style type="text/css">
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+<div class="mh-100" style="height: 200px; background-color: rgba(0,0,255,0.1);">User Registration</div>
+<div class="container-fluid">
+    <form id="formular" method="post">
+        <div class="row">
+            <div class="col-xs-4 col-sm-offset-1">
+                <label>login:</label><input type="text"
+                                            class="form-control"
+                                            id="login"
+                                            value="" placeholder="Your login">
+
+            </div>
+        </div>
+        <span id="loginError"></span>
+        <div class="row">
+            <div class="col-xs-4  col-sm-offset-1">
+                <label>firstName</label><input type="text"
+                                               class="form-control"
+                                               id="firstName"
+                                               value="" placeholder="your first name"/>
+
+            </div>
+        </div>
+        <span id="firstNameError"></span>
+        <div class="row">
+            <div class="col-xs-4 col-sm-offset-1">
+                <label>lastName</label><input type="text"
+                                              class="form-control"
+                                              id="lastName"
+                                              value="" placeholder="Your last Name">
+
+            </div>
+        </div>
+        <span id="lastNameError"></span>
+        <div class="row">
+            <div class="col-xs-4 col-sm-offset-1">
+                <label>password</label><input type="text"
+                                              class="form-control"
+                                              id="password"
+                                              value="" placeholder="Your password">
+
+            </div>
+        </div>
+        <div style="height: 15px"></div>
+        <div class="row">
+            <div class="col-sm-2 col-sm-offset-1">
+                <button class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" th:src="@{/js/jsCore.js}"></script>
+<script type="text/javascript" src="../static/js/jsCore.js"></script>
+</body>
+</html>
