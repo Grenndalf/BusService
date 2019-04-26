@@ -75,7 +75,7 @@ $(function () {
 
         $.ajax({
             type:'POST',
-            url:'http://localhost:8080/postForTravels',
+            url:'http://localhost:8080/getConnections',
             contentType:'application/json',
             data:JSON.stringify({
                 "startPoint":{"city":getCity(StartPoint)

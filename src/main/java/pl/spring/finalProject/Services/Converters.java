@@ -25,8 +25,8 @@ public class Converters {
 
     public static BusDTO convertBuses(Bus bus) {
         BusDTO busDTO = new BusDTO();
-        busDTO.setStartPoint(Converters.convertRailways(bus.getStartPoint()));
-        busDTO.setEndPoint(Converters.convertRailways(bus.getEndPoint()));
+        busDTO.setStartPoint(convertRailways(bus.getStartPoint()));
+        busDTO.setEndPoint(convertRailways(bus.getEndPoint()));
         busDTO.setTravelDate(bus.getTravelDate());
         busDTO.setDepartureTime(bus.getDepartureTime());
         return busDTO;

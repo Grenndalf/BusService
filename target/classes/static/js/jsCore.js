@@ -8,7 +8,7 @@ $(document).ready(function(){
     const get = 'GET';
     const deleteItem = 'DELETE';
     const post = 'POST';
-    const basicURL = 'http://localhost:8080/saveMe';
+    const basicURL = 'http://localhost:8080/saveTraveler';
 
     let inputs = function (login, firstName, lastName, password) {
         this.firstName = firstName;
@@ -31,7 +31,7 @@ $(document).ready(function(){
         );
         $.ajax({
             type: 'POST',
-            url: 'http://localhost:8080/saveMe',
+            url: 'http://localhost:8080/saveTraveler',
             data: JSON.stringify(travelerDTO),
             dataType: 'json',
             contentType: 'application/json'

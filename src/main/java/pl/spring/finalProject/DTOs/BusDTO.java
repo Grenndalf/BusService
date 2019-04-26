@@ -10,14 +10,11 @@ import java.time.LocalTime;
 
 public class BusDTO {
 
-    @NotBlank
     @NotNull
     private RailwaysDTO startPoint;
-    @NotBlank
     @NotNull
     private RailwaysDTO endPoint;
-    @NotBlank
-    @NotNull
+
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     @JsonFormat (pattern = "dd/MM/yyyy")
     private LocalDate travelDate;
