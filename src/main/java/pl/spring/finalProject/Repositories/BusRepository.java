@@ -4,6 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+import pl.spring.finalProject.DTOs.ReturnResultFromGetConnetionsMethodDTO;
 import pl.spring.finalProject.domain.entities.Bus;
 
 import java.time.LocalDate;
@@ -17,5 +18,13 @@ public interface BusRepository extends JpaRepository<Bus, Long> {
     @Query(value = "select * FROM bus where start_point_id=:sp and end_point_id=:ep and travel_date=:dateInput", nativeQuery = true)
     List<Bus> findConnections(long sp, long ep, String dateInput);
 
+
+    @Query(name="ConnectionFouderQuery", nativeQuery = true)
+    List<ReturnResultFromGetConnetionsMethodDTO> findfullinfo(String spCity,
+                                                              String spRailwayAddress,
+                                                              String epCity,
+                                                              String epRailwayAddress,
+                                                              String travelDate
+                                                              );
 
 }

@@ -20,8 +20,7 @@ public class RailwaysController {
     @CrossOrigin
     @GetMapping("/getRailways")
     public List<RailwaysDTO> RailwaysList() {
-        List<RailwaysDTO> list = railwaysService.railwaysListConverter();
-        return list;
+        return railwaysService.railwaysListConverter();
     }
 
 }

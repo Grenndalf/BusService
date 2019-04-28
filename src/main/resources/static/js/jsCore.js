@@ -29,17 +29,16 @@ $(document).ready(function(){
             getVal(lastName),
             getVal(password)
         );
+        console.log(travelerDTO)
         $.ajax({
             type: 'POST',
             url: 'http://localhost:8080/saveTraveler',
             data: JSON.stringify(travelerDTO),
-            dataType: 'json',
             contentType: 'application/json'
-        }).done(function (errors) {
-            console.log(errors)
-            console.log("was OK")
-        }).fail(function (s) {
-            console.log(s)
+        }).done(function (e) {
+            console.log(e)
+        }).fail(function (d) {
+            console.log(d)
         })
     })
 });

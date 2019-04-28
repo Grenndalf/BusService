@@ -1,9 +1,17 @@
 package pl.spring.finalProject.DTOs;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
 public class TravelerDTO {
 
     @NotNull(message = "can not be empty")
@@ -19,38 +27,4 @@ public class TravelerDTO {
     @NotBlank
     private String password;
 
-    public TravelerDTO() {
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }

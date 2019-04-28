@@ -2,6 +2,7 @@ package pl.spring.finalProject.Services;
 
 import org.springframework.stereotype.Service;
 import pl.spring.finalProject.DTOs.BusDTO;
+import pl.spring.finalProject.DTOs.ReturnResultFromGetConnetionsMethodDTO;
 import pl.spring.finalProject.Repositories.BusRepository;
 import pl.spring.finalProject.domain.entities.Bus;
 import pl.spring.finalProject.domain.entities.Railways;
@@ -36,5 +37,15 @@ public class BusServiceImpl implements BusService {
     }
 
 
+    @Override
+    public List<ReturnResultFromGetConnetionsMethodDTO> findfullinfo(BusDTO busDTO){
+        String day = busDTO.getTravelDate().toString();
+        String sc = busDTO.getStartPoint().getCity();
+        String sra = busDTO.getStartPoint().getRailwayAddress();
+        String ec = busDTO.getEndPoint().getCity();
+        String era = busDTO.getEndPoint().getRailwayAddress();
+
+        return busRepository.findfullinfo(sc,sra,ec,era,day);
+    }
 }
 

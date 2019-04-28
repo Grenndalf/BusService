@@ -35,9 +35,9 @@ public class Converters {
     public static Traveler convertTravelerDTO(TravelerDTO travelerDTO) {
         Traveler traveler = new Traveler();
         traveler.setLogin(travelerDTO.getLogin());
-        traveler.setpassword(travelerDTO.getPassword());
-        traveler.setfirstName(travelerDTO.getFirstName());
-        traveler.setlastName(travelerDTO.getLastName());
+        traveler.setPassword(travelerDTO.getPassword());
+        traveler.setFirstName(travelerDTO.getFirstName());
+        traveler.setLastName(travelerDTO.getLastName());
         return traveler;
     }
 

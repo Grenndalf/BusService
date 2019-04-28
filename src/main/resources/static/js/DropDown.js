@@ -95,30 +95,34 @@ $(function () {
                     "railwayAddress":getRailwayAddress(endPoint)},
                 "travelDate":getVal($('#TravelDate'))
             })
-        }).done(function (e) {
+        }).done(function (resultList) {
              resetTr()
-            console.log(e)
-            e.forEach(function (f) {
+            console.log(resultList)
+            resultList.forEach(function (index) {
                 const row = $("<tr>", {
                         class: "result",
                     });
                 const column1 = $("<td>",{
                         class: "departure",
-                        text: f.startPoint.city + " " + f.startPoint.railwayAddress
+                        text: index.startPointCity + " " + index.startPointRailwayAddress
                     });
                 const column2 = $("<td>",{
                         class: "arrivalTo",
-                        text: f.endPoint.city + " " + f.endPoint.railwayAddress
+                        text: index.endPointCity + " " + index.endpointRailwayAddress
                     })
                 const column3 = $("<td>",{
                         class: "TravelDay",
-                        text: f.travelDate
+                        text: index.departureTime.substring(0,5)
                     })
                 const column4 = $("<td>",{
                         class: "TravelDay",
-                        text: f.departureTime
+                        text: index.travelDate
                     })
-                $('#results').append(row.append(column1).append(column2).append(column3).append(column4))
+                const column5 = $("<td>",{
+                        class: "TravelDay",
+                        text: index.seatsAvailable
+                    })
+                $('#results').append(row.append(column1).append(column2).append(column3).append(column4).append(column5))
             });
 
         }).fail(function (e) {
