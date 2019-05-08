@@ -1,6 +1,7 @@
 
 $(function () {
 
+    const ticketAdress = "http://localhost:8080/buyTicket/"
     function resetTr() {
         let trToRemove = $('#results tr').siblings('tr')
         trToRemove.each(function () {
@@ -54,8 +55,7 @@ $(function () {
                 const newOpt = $("<option>", {
                         class: "List",
                         text: json.city + ", " + json.railwayAddress
-                    })
-                ;
+                    });
                 $('#DestinationPointList').append(newOpt)
             });
         });
@@ -97,32 +97,43 @@ $(function () {
             })
         }).done(function (resultList) {
              resetTr()
-            console.log(resultList)
             resultList.forEach(function (index) {
                 const row = $("<tr>", {
                         class: "result",
                     });
                 const column1 = $("<td>",{
                         class: "departure",
-                        text: index.startPointCity + " " + index.startPointRailwayAddress
+                    html: "<b>" + index.startPointCity + "</b>" + ", " + index.startPointRailwayAddress
                     });
                 const column2 = $("<td>",{
                         class: "arrivalTo",
-                        text: index.endPointCity + " " + index.endpointRailwayAddress
+                    html: "<b>" + index.endPointCity + "</b>" + ", " + index.endpointRailwayAddress
                     })
                 const column3 = $("<td>",{
-                        class: "TravelDay",
-                        text: index.departureTime.substring(0,5)
-                    })
-                const column4 = $("<td>",{
-                        class: "TravelDay",
-                        text: index.travelDate
+                    class: "travelDay",
+                    text: index.travelDate
+                })
+                const column4 = $("<td>", {
+                    class: "travelTime",
+                    text: index.departureTime.substring(0, 5)
                     })
                 const column5 = $("<td>",{
-                        class: "TravelDay",
+                    class: "seatsAvailable",
                         text: index.seatsAvailable
                     })
-                $('#results').append(row.append(column1).append(column2).append(column3).append(column4).append(column5))
+                const column6 = $("<td>", {
+                    class: "tickedLink",
+                    html: "<a href=" + ticketAdress + index.busId + ">buy ticket</a>"
+                })
+                $('#results')
+                    .append(row
+                        .append(column1)
+                        .append(column2)
+                        .append(column3)
+                        .append(column4)
+                        .append(column5)
+                        .append(column6)
+                    )
             });
 
         }).fail(function (e) {

@@ -5,6 +5,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import pl.spring.finalProject.DTOs.TravelerDTO;
 import pl.spring.finalProject.Repositories.TravelerRepository;
+import pl.spring.finalProject.domain.entities.Traveler;
+
+import java.util.HashMap;
 
 @Service
 public class TravelerServiceImpl implements TravelerService {
@@ -23,5 +26,16 @@ public class TravelerServiceImpl implements TravelerService {
     @Override
     public boolean isAvailable(String login){
         return travelerRepository.isTravelerLoginIsAvailable(login);
+    }
+
+    @Override
+    public Traveler findbyLogin(String login) {
+        return travelerRepository.findByLogin(login);
+
+    }
+
+    @Override
+    public HashMap getFirstAndLastName(String login) {
+        return travelerRepository.getFirstAndLastnameByLogin(login);
     }
 }

@@ -9,13 +9,6 @@ import pl.spring.finalProject.domain.entities.Traveler;
 
 public class Converters {
 
-//    public static Railways convertRailwayDTO(RailwaysDTO railwaysDTO) {
-//        Railways railways = new Railways();
-//        railways.setCity(railwaysDTO.getCity());
-//        railways.setRailwayAddress(railwaysDTO.getRailwayAddress());
-//        return railways;
-//    }
-
     public static RailwaysDTO convertRailways(Railways railways) {
         RailwaysDTO railwaysDTO = new RailwaysDTO();
         railwaysDTO.setCity(railways.getCity());

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <style>
+        .topText {
+            height: 200px;
+            background-color: rgba(255, 253, 6, 0.31);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 100px;
+        }
+        #ticket {
+            border: 1px solid black;
+            border-collapse: collapse;
+            background-color: #ffd3bb;
+            padding: 10px;
+        }
+        #ticket td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="topText">confirm transaction</div>
+<button id="button">abc</button>
+<table id="ticket">
+    <tr>
+        <td>First Name</td>
+        <td id="firstName"></td>
+    </tr>
+    <tr>
+        <td> Last Name</td>
+        <td id="lastName"></td>
+    </tr>
+    <tr>
+        <td>Arrival to:</td>
+        <td id="destination"></td>
+    </tr>
+    <tr>
+        <td>departure from:</td>
+        <td id="startPoint"></td>
+    </tr>
+    <tr>
+        <td> travel date</td>
+        <td id="travelDate"></td>
+    </tr>
+    <tr>
+        <td> travel Time</td>
+        <td id="travelTime"></td>
+    </tr>
+</table>
+
+<p>Select you spot:</p>
+<form id="spotSelect">
+    <select id="SpotNumber">
+        <option disabled>Seat Number</option>
+    </select>
+    <button class="btn btn-primary">Confirm and buy ticket</button>
+</form>
+
+
+<script type="text/javascript" src="../static/js/ticketTransactionJs.js"></script>
+</body>
+</html>

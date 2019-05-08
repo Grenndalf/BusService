@@ -5,8 +5,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.validation.constraints.Size;
-
 
 @Getter
 @Setter
@@ -14,7 +12,7 @@ import javax.validation.constraints.Size;
 @ToString
 public class TicketDTO {
 
-    @Size (min = 1, max = 6)
     private int seatNumber;
     private TravelerDTO travelerDTO;
+    private BusDTO busDTO;
 }

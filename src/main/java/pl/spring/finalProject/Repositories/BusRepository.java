@@ -2,12 +2,10 @@ package pl.spring.finalProject.Repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-import pl.spring.finalProject.DTOs.ReturnResultFromGetConnetionsMethodDTO;
+import pl.spring.finalProject.DTOs.ReturnResultFromGetConnectionsMethodDTO;
 import pl.spring.finalProject.domain.entities.Bus;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @Repository
@@ -19,12 +17,12 @@ public interface BusRepository extends JpaRepository<Bus, Long> {
     List<Bus> findConnections(long sp, long ep, String dateInput);
 
 
-    @Query(name="ConnectionFouderQuery", nativeQuery = true)
-    List<ReturnResultFromGetConnetionsMethodDTO> findfullinfo(String spCity,
-                                                              String spRailwayAddress,
-                                                              String epCity,
-                                                              String epRailwayAddress,
-                                                              String travelDate
+    @Query(name="ConnectionFounderQuery", nativeQuery = true)
+    List<ReturnResultFromGetConnectionsMethodDTO> findFullInfo(String spCity,
+                                                               String spRailwayAddress,
+                                                               String epCity,
+                                                               String epRailwayAddress,
+                                                               String travelDate
                                                               );
 
 }

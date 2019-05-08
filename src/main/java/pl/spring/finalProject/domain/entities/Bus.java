@@ -3,7 +3,7 @@ package pl.spring.finalProject.domain.entities;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
-import pl.spring.finalProject.DTOs.ReturnResultFromGetConnetionsMethodDTO;
+import pl.spring.finalProject.DTOs.ReturnResultFromGetConnectionsMethodDTO;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
@@ -18,7 +18,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@NamedNativeQuery ( name = "ConnectionFouderQuery", query =
+@NamedNativeQuery ( name = "ConnectionFounderQuery", query =
         "SELECT b.id as busId,\n" +
                 "rs.city as startPointCity,\n" +
                 "rs.railway_address as startPointRailwayAddress,\n" +
@@ -26,7 +26,7 @@ import java.util.List;
                 "re.railway_address as endpointRailwayAddress,\n" +
                 "b.departure_time as departureTime,\n" +
                 "b.travel_date as travelDate,\n" +
-                "6-count(t.seat_number) as seatsAvailable\n" +
+                "count(t.seat_number) as seatsAvailable\n" +
                 "FROM bus b\n" +
                 "left join ticket t on b.id=t.bus_id\n" +
                 "join railways rs on rs.id = b.start_point_id\n" +
@@ -37,17 +37,18 @@ import java.util.List;
                 "and re.city=:epCity " +
                 "and re.railway_address=:epRailwayAddress " +
                 "and b.travel_date=:travelDate " +
+                "and t.ticket_owner IS NULL " +
                 "GROUP BY b.id", resultSetMapping = "MySuperHiperResultSet" )
 @SqlResultSetMapping ( name = "MySuperHiperResultSet",
-        classes = @ConstructorResult ( targetClass = ReturnResultFromGetConnetionsMethodDTO.class,
+        classes = @ConstructorResult ( targetClass = ReturnResultFromGetConnectionsMethodDTO.class,
                 columns = {
                         @ColumnResult ( name = "busId", type = Long.class ),
                         @ColumnResult ( name = "startPointCity", type = String.class ),
                         @ColumnResult ( name = "startPointRailwayAddress", type = String.class ),
                         @ColumnResult ( name = "endPointCity", type = String.class ),
                         @ColumnResult ( name = "endpointRailwayAddress", type = String.class ),
-                        @ColumnResult ( name = "departureTime", type = String.class ),
-                        @ColumnResult ( name = "travelDate", type = String.class ),
+                        @ColumnResult ( name = "departureTime", type = LocalTime.class ),
+                        @ColumnResult ( name = "travelDate", type = LocalDate.class ),
                         @ColumnResult ( name = "seatsAvailable", type = Integer.class ),
                 } )
 )

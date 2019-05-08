@@ -17,6 +17,13 @@ $(document).ready(function(){
         this.password = password;
     };
 
+    function resetComment() {
+        let trToRemove = $('.comment')
+        trToRemove.each(function () {
+                $(this).remove()
+        })
+    };
+
     function getVal(selector) {
         return selector.val();
     }
@@ -29,16 +36,27 @@ $(document).ready(function(){
             getVal(lastName),
             getVal(password)
         );
-        console.log(travelerDTO)
         $.ajax({
             type: 'POST',
             url: 'http://localhost:8080/saveTraveler',
             data: JSON.stringify(travelerDTO),
             contentType: 'application/json'
-        }).done(function (e) {
-            console.log(e)
-        }).fail(function (d) {
-            console.log(d)
+        }).done(function () {
+            resetComment()
+            const comment1 = $("<p>",{
+                id: "comm1",
+                class: "comment",
+                text: "you have been registered"
+            })
+            $('#formular').append(comment1)
+        }).fail(function () {
+            resetComment()
+            const comment2 = $("<p>",{
+                id: "comm2",
+                class: "comment",
+                text: "you have been NOT registered"
+            })
+            $('#formular').append(comment2)
         })
     })
 });

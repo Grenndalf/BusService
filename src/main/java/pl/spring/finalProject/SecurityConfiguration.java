@@ -47,7 +47,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/searchConnections").authenticated()
-                .antMatchers("/searchConnections").hasAnyRole("ADMIN","USER")
+                .antMatchers("/yourTicket").authenticated()
                 .antMatchers("/admin", "/admin/**").hasRole("ADMIN")
                 .antMatchers("/register").permitAll()
                 .anyRequest().permitAll()
@@ -55,7 +55,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                         .formLogin()
                             .defaultSuccessUrl("/searchConnections")
                             .failureUrl("/login?error").permitAll()
-
                     .and()
                         .logout()
                     .and()

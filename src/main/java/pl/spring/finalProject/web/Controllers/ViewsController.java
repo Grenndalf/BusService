@@ -7,12 +7,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ViewsController {
 
     @RequestMapping("/RegisterForm")
-    public String coreFile2() {
+    public String registry() {
         return "register";
     }
 
     @RequestMapping("/searchConnections")
-    public String search() {
+    public String connections() {
         return "DropDownList";
     }
+
+    @RequestMapping ( "/yourTicket" )
+    public String selectedConnection() {
+        return "ticketTransaction";
+    }
+
 }

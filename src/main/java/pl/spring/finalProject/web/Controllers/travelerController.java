@@ -6,6 +6,8 @@ import pl.spring.finalProject.DTOs.TravelerDTO;
 import pl.spring.finalProject.Services.TravelerService;
 
 import javax.validation.Valid;
+import java.security.Principal;
+import java.util.HashMap;
 
 @RestController
 public class travelerController {
@@ -19,14 +21,18 @@ public class travelerController {
     @CrossOrigin
     @RequestMapping (value = "/saveTraveler")
     public ResponseEntity<?> postSample(@Valid @RequestBody TravelerDTO travelerDTO) {
-
      if (!travelerService.isAvailable(travelerDTO.getLogin())) {
          return ResponseEntity.badRequest().body("This login already exist");
      }
-    travelerService.saveNewTraveler(travelerDTO);
-
-        return ResponseEntity.ok(travelerDTO);
+        travelerService.saveNewTraveler(travelerDTO);
+        return ResponseEntity.ok("user Saved");
     }
 
+    @RequestMapping ( "/getUser" )
+    @ResponseBody
+    public HashMap getUser(Principal principal) {
+        String login = principal.getName();
+        return travelerService.getFirstAndLastName(login);
+    }
 
 }
