@@ -30,7 +30,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         auth.inMemoryAuthentication()
                 .withUser("user").password("{noop}pass").roles("USER")
                 .and()
-                .withUser("admin").password("{noop}secretpass").roles("USER", "ADMIN");
+                .withUser("admin").password("{noop}pass").roles("ADMIN");
         auth.jdbcAuthentication()
                 .dataSource(dataSource)
                 .passwordEncoder(passwordEncoder())
@@ -46,14 +46,17 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/searchConnections").authenticated()
-                .antMatchers("/yourTicket").authenticated()
-                .antMatchers("/admin", "/admin/**").hasRole("ADMIN")
+                .antMatchers("/searchConnections")
+                    .hasRole("USER")
+                .antMatchers("/yourTicket")
+                    .authenticated()
+                .antMatchers("/test")
+                    .authenticated()
+//                .antMatchers("/AdminPanel", "/admin/**").hasRole("ADMIN")
                 .antMatchers("/register").permitAll()
-                .anyRequest().permitAll()
                     .and()
                         .formLogin()
-                            .defaultSuccessUrl("/searchConnections")
+                            .defaultSuccessUrl("/default")
                             .failureUrl("/login?error").permitAll()
                     .and()
                         .logout()

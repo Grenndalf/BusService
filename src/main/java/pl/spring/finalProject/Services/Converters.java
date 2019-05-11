@@ -2,9 +2,11 @@ package pl.spring.finalProject.Services;
 
 import pl.spring.finalProject.DTOs.BusDTO;
 import pl.spring.finalProject.DTOs.RailwaysDTO;
+import pl.spring.finalProject.DTOs.TicketDTO;
 import pl.spring.finalProject.DTOs.TravelerDTO;
 import pl.spring.finalProject.domain.entities.Bus;
 import pl.spring.finalProject.domain.entities.Railways;
+import pl.spring.finalProject.domain.entities.Ticket;
 import pl.spring.finalProject.domain.entities.Traveler;
 
 public class Converters {
@@ -28,10 +30,22 @@ public class Converters {
     public static Traveler convertTravelerDTO(TravelerDTO travelerDTO) {
         Traveler traveler = new Traveler();
         traveler.setLogin(travelerDTO.getLogin());
-        traveler.setPassword(travelerDTO.getPassword());
         traveler.setFirstName(travelerDTO.getFirstName());
         traveler.setLastName(travelerDTO.getLastName());
+        traveler.setPassword(travelerDTO.getPassword());
+        traveler.setEmail(travelerDTO.getEmail());
         return traveler;
     }
 
+    public static Ticket convertTicketDto(TicketDTO ticketDTO) {
+        return new Ticket(ticketDTO.getSeatNumber(), ticketDTO.getBus());
+    }
+
+    public static TravelerDTO convertTraveler(Traveler traveler) {
+        TravelerDTO travelerDTO = new TravelerDTO();
+        travelerDTO.setEmail(traveler.getEmail());
+        travelerDTO.setFirstName(travelerDTO.getFirstName());
+        travelerDTO.setLastName(travelerDTO.getLastName());
+        return travelerDTO;
+    }
 }

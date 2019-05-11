@@ -17,4 +17,7 @@ public interface TravelerRepository extends JpaRepository<Traveler, Long> {
 
     @Query (value = "select new Map(t.firstName AS firstName, t.lastName AS lastName) from Traveler t where login = ?1")
     HashMap getFirstAndLastnameByLogin (String login);
+
+    @Query ( value = "select tr.first_name,tr.last_name,tr.email from traveler tr where tr.login=?1", nativeQuery = true )
+    Traveler getTravelerData(String login);
 }

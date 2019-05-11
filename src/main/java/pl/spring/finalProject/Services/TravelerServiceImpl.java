@@ -38,4 +38,9 @@ public class TravelerServiceImpl implements TravelerService {
     public HashMap getFirstAndLastName(String login) {
         return travelerRepository.getFirstAndLastnameByLogin(login);
     }
+
+    @Override
+    public TravelerDTO getTravelerData(String login) {
+        return Converters.convertTraveler(travelerRepository.getTravelerData(login));
+    }
 }

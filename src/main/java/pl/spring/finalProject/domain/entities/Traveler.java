@@ -6,8 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 @Table
 @Entity
@@ -24,12 +23,15 @@ public class Traveler {
     @Size(min = 3, max = 10, message = "login length has to be between 3 and 10")
     private String login;
     @NotNull(message = "can not be empty")
-    @Size(min = 3, max = 10, message = "login length has to be between 3 and 10")
+    @Size ( min = 3, max = 10, message = "first name length has to be between 3 and 10" )
     private String firstName;
     @NotNull(message = "can not be empty")
-    @Size(min = 3, max = 10, message = "login length has to be between 3 and 10")
+    @Size ( min = 3, max = 10, message = "last Name length has to be between 3 and 10" )
     private String lastName;
     @NotNull(message = "can not be empty")
+    @NotBlank
     private String password;
-
+    @NotNull
+    @Email
+    private String email;
 }

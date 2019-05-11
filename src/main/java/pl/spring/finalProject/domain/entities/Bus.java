@@ -6,7 +6,10 @@ import org.springframework.format.annotation.DateTimeFormat;
 import pl.spring.finalProject.DTOs.ReturnResultFromGetConnectionsMethodDTO;
 
 import javax.persistence.*;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.FutureOrPresent;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
@@ -66,17 +69,21 @@ public class Bus {
     @JoinColumn
     private Railways endPoint;
 
-
+    @NotNull
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     @JsonFormat (pattern = "dd/MM/yyyy")
     private LocalDate travelDate;
 
-    @Size(min = 0, max = 6)
-    @OneToMany ( cascade = {CascadeType.PERSIST, CascadeType.MERGE}, mappedBy = "bus" )
+    @OneToMany ( cascade = {CascadeType.ALL}, mappedBy = "bus" )
     private List<Ticket> ticketList;
 
+    @FutureOrPresent
     @JsonFormat (pattern = "HH:mm")
     @DateTimeFormat(pattern = "HH:mm")
     private LocalTime departureTime;
+
+    @Max ( 100 )
+    @Min ( 1 )
+    private int maxNumberOfSeatsAvailable;
 
 }

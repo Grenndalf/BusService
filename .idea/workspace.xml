@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d414819-74bc-4f1d-9199-c050d0a0fc0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TicketService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TicketServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/ticketTransactionJs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/ticketTransaction.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/ReturnTicketsOfChosenTravelerDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/UserPanel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/AdminPanel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/UserPanel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/ReturnResultFromGetConnetionsMethodDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/ReturnResultFromGetConnectionsMethodDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finalProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/finalProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/BusDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/BusDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/RailwaysDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/RailwaysDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/TicketDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/TicketDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/TravelerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/TravelerDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Repositories/BusRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Repositories/BusRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Repositories/TicketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Repositories/TicketRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Repositories/TravelerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Repositories/TravelerRepository.java" afterDir="false" />
@@ -17,24 +22,35 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/BusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/BusService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/BusServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/BusServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/Converters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/Converters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TicketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TicketServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TicketServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TravelerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TravelerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TravelerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TravelerServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Bus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Traveler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Traveler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/BusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/BusController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/TicketController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/ViewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/ViewsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/travelerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/travelerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/import.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/AdminPanel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/DropDown.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/DropDown.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/jsCore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/jsCore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/ticketTransactionJs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/ticketTransactionJs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/DropDownList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/DropDownList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ticketTransaction.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ticketTransaction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/db/migration/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/migration/import.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/schema.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/DropDown.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/DropDown.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/jsCore.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/jsCore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/ticketTransactionJs.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/ticketTransactionJs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/DropDownList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/DropDownList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/ticketTransaction.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ticketTransaction.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -67,35 +83,14 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.48463047">
+    <splitter split-orientation="horizontal" split-proportion="0.4229672">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/TicketController.java">
+            <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/TicketDTO.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="394">
-                  <caret line="43" column="39" lean-forward="true" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ticketTransaction.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-221">
-                  <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TicketService.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" column="67" lean-forward="true" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+                <state relative-caret-position="285">
+                  <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -106,31 +101,20 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TravelerService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TicketServiceImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="256">
-                  <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="105">
+                  <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Repositories/TravelerRepository.java">
+            <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TravelerServiceImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+                <state relative-caret-position="225">
+                  <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
                   <folding>
-                    <element signature="e#0#87#1" expanded="true" />
+                    <element signature="e#1175#1176#0" expanded="true" />
+                    <element signature="e#1250#1251#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -139,8 +123,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/travelerController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="33" column="7" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="34" selection-end-column="58" />
+                <state relative-caret-position="440">
+                  <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -149,40 +133,19 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/BusServiceImpl.java">
+            <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/TravelerDTO.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#823#824#0" expanded="true" />
-                    <element signature="e#872#873#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="315">
+                  <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/BusService.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/Converters.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="465">
-                  <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
+                  <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -191,10 +154,80 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/UserPanel.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="541">
+                  <caret line="149" column="18" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/ticketTransactionJs.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="721">
-                  <caret line="69" column="26" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
+                <state relative-caret-position="1005">
+                  <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Railways.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="240">
+                  <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/validationGroup.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="4" selection-start-line="4" selection-end-line="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/UserPanel.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="646">
+                  <caret line="55" column="12" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1245">
+                  <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/jsCore.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="154">
+                  <caret line="64" column="43" selection-start-line="60" selection-start-column="8" selection-end-line="64" selection-end-column="43" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/AdminPanel.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="585">
+                  <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
@@ -202,13 +235,36 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/DropDown.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="4" selection-start-line="4" selection-end-line="11" selection-end-column="6" />
+                <state relative-caret-position="214">
+                  <caret line="134" column="40" selection-start-line="134" selection-start-column="40" selection-end-line="134" selection-end-column="40" />
                   <folding>
-                    <element signature="e#430#471#0" />
-                    <element signature="e#501#555#0" />
-                    <element signature="e#595#649#0" />
+                    <element signature="e#101#311#0" />
+                    <element signature="e#349#391#0" />
+                    <element signature="e#1817#1897#0" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/AdminPanel.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="334">
+                  <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
+                  <folding>
+                    <element signature="e#141#179#0" />
+                    <element signature="e#289#343#0" />
+                    <element signature="e#383#437#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ticketTransaction.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="885">
+                  <caret line="59" column="28" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
                 </state>
               </provider>
             </entry>
@@ -216,42 +272,17 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/resources/templates/DropDownList.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="421">
-                  <caret line="47" column="8" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="51" />
+                <state relative-caret-position="510">
+                  <caret line="34" column="62" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Repositories/TicketRepository.java">
+            <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/ViewsController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="24" column="144" selection-start-line="24" selection-start-column="144" selection-end-line="24" selection-end-column="144" />
-                  <folding>
-                    <element signature="e#0#55#0" expanded="true" />
-                    <element signature="e#0#65#1" expanded="true" />
-                    <element signature="e#0#68#1" expanded="true" />
-                    <element signature="e#0#67#1" expanded="true" />
-                    <element signature="e#0#90#1" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Ticket.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/TicketDTO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="13" selection-start-line="13" selection-end-line="13" />
+                <state relative-caret-position="285">
+                  <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="33" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -268,8 +299,8 @@
       <list>
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -287,53 +318,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/SomeSimpleController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/TravelsController.java" />
         <option value="$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-dependencies/2.1.4.RELEASE/spring-boot-dependencies-2.1.4.RELEASE.pom" />
         <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/WebConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/IAuthenticationFacade.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/IAuthenticationFacadeImpl.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Railways.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/BusDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/RailwaysDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/RailwaysController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/returnResultFromGetConnetionsMethodDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/SomeSipleTestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/SomeSimpleTestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/ReturnResultFromGetConnetionsMethodDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/ReturnResultFromGetConnectionsMethodDOT.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Repositories/BusRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/BusServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/TicketTransaction.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/DropDownList.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/jsCore.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/register.html" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/TicketDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/ReturnResultFromGetConnectionsMethodDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Bus.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/db/migration/import.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TravelerService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TravelerServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Repositories/TravelerRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/DropDown.js" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/TravelerDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Traveler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/Converters.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/SecurityConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/travelerController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/BusController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/testController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/DropDown.js" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/RailwaysDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Bus.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/AdminPanel.html" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/TicketDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/ViewsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/BusService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/BusDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/ReturnTicketsOfChosenTravelerDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/SecurityConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Repositories/BusRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Ticket.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/ticketTransaction.html" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/BusController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/BusServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/BusService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/TestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TicketService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/TicketController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TicketServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Repositories/TicketRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/db/migration/import.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/TicketController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Repositories/TravelerRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TravelerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TravelerServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/ticketTransactionJs.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ticketTransaction.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/DropDownList.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/AdminPanel.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/register.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/jsCore.js" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/Converters.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Traveler.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/TravelerDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/travelerController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/UserPanel.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/UserPanel.html" />
       </list>
     </option>
   </component>
@@ -343,6 +378,17 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="finalProject" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="960" />
@@ -355,53 +401,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Default Changelist'; set:Default Changelist; class com.intellij.packageDependencies.ChangeListScope">
-          <expand>
-            <path>
-              <item name="finalProject" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="finalProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="finalProject" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="finalProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="finalProject" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="finalProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="finalProject" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="finalProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="finalProject" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="finalProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="finalProject" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="finalProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -586,6 +585,53 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Default Changelist'; set:Default Changelist; class com.intellij.packageDependencies.ChangeListScope">
+          <expand>
+            <path>
+              <item name="finalProject" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="finalProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="finalProject" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="finalProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="finalProject" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="finalProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="finalProject" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="finalProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="finalProject" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="finalProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="finalProject" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="finalProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -618,6 +664,9 @@
       <recent name="$PROJECT_DIR$/src/main/resources/static" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/src/main" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pl.spring.finalProject.DTOs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -664,13 +713,23 @@
       <workItem from="1557236530250" duration="8659000" />
       <workItem from="1557250859501" duration="7052000" />
       <workItem from="1557292025081" duration="12201000" />
+      <workItem from="1557311591677" duration="12058000" />
+      <workItem from="1557339052174" duration="9636000" />
+      <workItem from="1557379922909" duration="597000" />
+      <workItem from="1557386890742" duration="3963000" />
+      <workItem from="1557391008175" duration="17059000" />
+      <workItem from="1557422962521" duration="8363000" />
+      <workItem from="1557466557261" duration="21436000" />
+      <workItem from="1557495784766" duration="5741000" />
+      <workItem from="1557509490466" duration="10996000" />
+      <workItem from="1557521683470" duration="1449000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118731000" />
+    <option name="totallyTimeSpent" value="210029000" />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -686,8 +745,8 @@
       <window_info id="Project Explorer" order="0" weight="0.32977587" />
       <window_info id="Job Explorer" order="1" />
       <window_info id="Web" order="2" side_tool="true" />
-      <window_info id="DB Browser" order="3" />
-      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.49913943" visible="true" weight="0.1905016" />
+      <window_info id="DB Browser" order="3" weight="0.32977587" />
+      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.49913943" visible="true" weight="0.31109926" />
       <window_info id="Structure" order="5" sideWeight="0.5008606" side_tool="true" weight="0.2145144" />
       <window_info id="Image Layers" order="6" />
       <window_info id="Designer" order="7" />
@@ -701,20 +760,20 @@
       <window_info anchor="bottom" id="DB Execution Console" order="4" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.3275488" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.36984816" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49893278" weight="0.36984816" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.329718" />
-      <window_info anchor="bottom" id="TODO" order="12" weight="0.329718" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" sideWeight="0.4994664" weight="0.329718" />
+      <window_info anchor="bottom" id="TODO" order="12" sideWeight="0.4994664" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.329718" />
-      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.5010672" side_tool="true" weight="0.36984816" />
       <window_info anchor="bottom" id="Version Control" order="16" weight="0.329718" />
       <window_info anchor="bottom" id="Messages" order="17" weight="0.3275488" />
       <window_info anchor="right" id="Bean Validation" order="0" />
-      <window_info anchor="right" id="Maven" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Maven" order="2" weight="0.32977587" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
       <window_info anchor="right" id="Palette" order="5" />
@@ -726,38 +785,38 @@
       <window_info anchor="right" id="Coverage" order="11" side_tool="true" weight="0.32977587" />
     </layout>
     <layout-to-restore>
-      <window_info id="Project Explorer" order="0" />
+      <window_info id="Project Explorer" order="0" weight="0.32977587" />
       <window_info id="Job Explorer" order="1" />
       <window_info id="Web" order="2" side_tool="true" />
-      <window_info id="DB Browser" order="3" />
-      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.20384204" />
-      <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
+      <window_info id="DB Browser" order="3" weight="0.32977587" />
+      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.49913943" visible="true" weight="0.30736393" />
+      <window_info id="Structure" order="5" sideWeight="0.5008606" side_tool="true" weight="0.2145144" />
       <window_info id="Image Layers" order="6" />
       <window_info id="Designer" order="7" />
       <window_info id="UI Designer" order="8" />
       <window_info id="Capture Tool" order="9" />
       <window_info id="Favorites" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Console" order="0" />
-      <window_info anchor="bottom" id="Spring" order="1" />
+      <window_info anchor="bottom" id="Spring" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Java Enterprise" order="3" weight="0.329718" />
-      <window_info anchor="bottom" id="Inspection Results" order="4" weight="0.3297062" />
-      <window_info anchor="bottom" id="DB Execution Console" order="5" />
-      <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.32861805" />
-      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.36984816" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="bottom" id="Inspection Results" order="3" weight="0.3297062" />
+      <window_info anchor="bottom" id="DB Execution Console" order="4" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.3275488" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.49893278" visible="true" weight="0.36984816" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.3991323" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" sideWeight="0.4994664" weight="0.329718" />
+      <window_info anchor="bottom" id="TODO" order="12" sideWeight="0.4994664" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="14" />
-      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="16" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.5010672" side_tool="true" weight="0.36984816" />
+      <window_info anchor="bottom" id="Version Control" order="16" weight="0.329718" />
       <window_info anchor="bottom" id="Messages" order="17" weight="0.3275488" />
       <window_info anchor="right" id="Bean Validation" order="0" />
-      <window_info anchor="right" id="Maven" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Maven" order="2" weight="0.32977587" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
       <window_info anchor="right" id="Palette" order="5" />
@@ -766,6 +825,7 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Database" order="9" />
       <window_info anchor="right" id="Maven Projects" order="10" />
+      <window_info anchor="right" id="Coverage" order="11" side_tool="true" weight="0.32977587" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -775,202 +835,13 @@
     <SUITE FILE_PATH="coverage/finalProject$FinalProjectApplication.ic" NAME="FinalProjectApplication Coverage Results" MODIFIED="1556355428498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/SomeSimpleController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/TravelsController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/IAuthenticationFacadeImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/IAuthenticationFacade.java" />
-    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-dependencies/2.1.4.RELEASE/spring-boot-dependencies-2.1.4.RELEASE.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7590">
-          <caret line="506" column="12" selection-start-line="506" selection-start-column="12" selection-end-line="506" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.17/tomcat-embed-core-9.0.17.jar!/javax/servlet/http/HttpServlet.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/FinalProjectApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Railways.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/SomeSimpleTestController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/BusDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/RailwaysDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Repositories/RailwaysRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2-sources.jar!/javax/persistence/NamedNativeQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="52" column="70" lean-forward="true" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-340">
-          <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/jsCore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.5.RELEASE/spring-security-web-5.1.5.RELEASE.jar!/org/springframework/security/web/FilterChainProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="21" column="40" lean-forward="true" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/ReturnResultFromGetConnectionsMethodDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/import.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TravelerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="38" column="17" lean-forward="true" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-          <folding>
-            <element signature="e#1149#1150#0" expanded="true" />
-            <element signature="e#1224#1225#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/TravelerDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Traveler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/SecurityConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="56" column="67" selection-start-line="56" selection-start-column="67" selection-end-line="56" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/testController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/RailwaysController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        <state relative-caret-position="210">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
           <folding>
+            <element signature="e#670#671#0" expanded="true" />
             <element signature="e#732#733#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/TicketDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/ViewsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Repositories/BusRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -982,41 +853,184 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/DropDownList.html">
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final-sources.jar!/javax/validation/constraints/Future.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="47" column="8" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="51" />
+        <state relative-caret-position="110">
+          <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ticketTransaction.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/RailwaysDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TravelerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Repositories/TravelerRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+        <state relative-caret-position="195">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
-            <element signature="e#0#87#1" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/travelerController.java">
+    <entry file="uml://SpringLocalModels/pl.spring.finalProject.SecurityConfiguration">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>SpringLocalModels</ID>
+          <OriginalElement>pl.spring.finalProject.SecurityConfiguration</OriginalElement>
+          <nodes>
+            <node x="19.0" y="37.0">pl.spring.finalProject.SecurityConfiguration</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="-13.0" />
+          <SelectedNodes>
+            <node>pl.spring.finalProject.SecurityConfiguration</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Show filesets as groups</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram//home/bartosz-olczak/Pulpit/Projekt/Projekt/src/main">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src/main</OriginalElement>
+          <nodes>
+            <node x="" y="">$PROJECT_DIR$/src/main/resources/templates/AdminPanel.html</node>
+            <node x="" y="">$PROJECT_DIR$/src/main/resources/static/js/AdminPanel.js</node>
+            <node x="" y="">$PROJECT_DIR$/src/main/resources/static/js/DropDown.js</node>
+            <node x="" y="">$PROJECT_DIR$/src/main/resources/templates/DropDownList.html</node>
+            <node x="" y="">$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_cdnjs.cloudflare.com_ajax_libs_jquery_3.2.1_jquery.js</node>
+            <node x="" y="">$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_cdnjs.cloudflare.com_ajax_libs_jquery_3.4.0_jquery.js</node>
+            <node x="" y="">$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_code.jquery.com_jquery-3.4.0.js</node>
+            <node x="" y="">$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_code.jquery.com_ui_1.12.0_jquery-ui.js</node>
+            <node x="" y="">$PROJECT_DIR$/src/main/resources/static/js/jsCore.js</node>
+            <node x="" y="">$PROJECT_DIR$/src/main/resources/templates/register.html</node>
+            <node x="" y="">$PROJECT_DIR$/src/main/resources/templates/ticketTransaction.html</node>
+            <node x="" y="">$PROJECT_DIR$/src/main/resources/static/js/ticketTransactionJs.js</node>
+            <node x="" y="">//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css</node>
+            <node x="" y="">http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-lightness/jquery-ui.css</node>
+            <node x="" y="">https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css</node>
+            <node x="" y="">https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css</node>
+            <node x="" y="">https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.438297872340426" x="634.0" y="420.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/pl.spring.finalProject">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>pl.spring.finalProject</OriginalElement>
+          <nodes>
+            <node x="" y="">pl.spring.finalProject.DTOs</node>
+            <node x="" y="">pl.spring.finalProject.FinalProjectApplication</node>
+            <node x="" y="">pl.spring.finalProject.WebConfig</node>
+            <node x="" y="">pl.spring.finalProject.Repositories</node>
+            <node x="" y="">pl.spring.finalProject.Services</node>
+            <node x="" y="">pl.spring.finalProject.FinalProjectApplicationTests</node>
+            <node x="" y="">pl.spring.finalProject.SecurityConfiguration</node>
+            <node x="" y="">pl.spring.finalProject.domain</node>
+            <node x="" y="">pl.spring.finalProject.web</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="179.0" y="191.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram//home/bartosz-olczak/Pulpit/Projekt/Projekt/src/main/java/pl/spring/finalProject">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src/main/java/pl/spring/finalProject</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="589.0" y="435.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/pl.spring.finalProject.domain.entities">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>pl.spring.finalProject.domain.entities</OriginalElement>
+          <nodes>
+            <node x="" y="">pl.spring.finalProject.domain.entities.Railways</node>
+            <node x="" y="">pl.spring.finalProject.domain.entities.Ticket</node>
+            <node x="" y="">pl.spring.finalProject.domain.entities.Bus</node>
+            <node x="" y="">pl.spring.finalProject.domain.entities.Traveler</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="100.0" y="84.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2-sources.jar!/javax/persistence/SqlResultSetMapping.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="33" column="7" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="34" selection-end-column="58" />
+        <state relative-caret-position="450">
+          <caret line="61" column="18" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final-sources.jar!/javax/validation/constraints/Min.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="113" column="21" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1391">
+          <caret line="2064" column="17" selection-start-line="2064" selection-start-column="17" selection-end-line="2064" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/SecurityConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Bus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="51" column="65" selection-start-line="51" selection-start-column="65" selection-end-line="51" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1025,15 +1039,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Ticket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        <state relative-caret-position="315">
+          <caret line="27" column="49" lean-forward="true" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/ReturnTicketsOfChosenTravelerDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/ReturnResultFromGetConnectionsMethodDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/BusService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <caret line="16" column="78" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1042,67 +1076,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/BusServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+        <state relative-caret-position="420">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#823#824#0" expanded="true" />
-            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#1861#1968#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/BusController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="525">
+          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Bus.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Repositories/BusRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/RailwaysService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/Converters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/TicketController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="43" column="39" lean-forward="true" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TicketService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="67" lean-forward="true" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+        <state relative-caret-position="810">
+          <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1111,44 +1103,258 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TicketServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
+        <state relative-caret-position="975">
+          <caret line="84" column="55" selection-start-line="84" selection-start-column="55" selection-end-line="84" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Repositories/TicketRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/import.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="24" column="144" selection-start-line="24" selection-start-column="144" selection-end-line="24" selection-end-column="144" />
+        <state relative-caret-position="555">
+          <caret line="37" column="75" selection-start-line="37" selection-start-column="75" selection-end-line="37" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TicketService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
           <folding>
-            <element signature="e#0#55#0" expanded="true" />
-            <element signature="e#0#65#1" expanded="true" />
-            <element signature="e#0#68#1" expanded="true" />
-            <element signature="e#0#67#1" expanded="true" />
-            <element signature="e#0#90#1" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/DropDown.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/TicketController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="56" column="50" lean-forward="true" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Repositories/TravelerRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#87#1" expanded="true" />
+            <element signature="e#0#97#1" expanded="true" />
+            <element signature="e#0#43#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Repositories/TicketRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="34" column="56" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#0#90#1" expanded="true" />
+            <element signature="e#0#130#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/BusDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Traveler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/TicketDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TravelerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/TravelerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+          <folding>
+            <element signature="e#1175#1176#0" expanded="true" />
+            <element signature="e#1250#1251#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/DTOs/TravelerDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/domain/entities/Railways.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/validationGroup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="11" selection-end-column="6" />
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1245">
+          <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/AdminPanel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ticketTransaction.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="28" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/DropDownList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="62" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/ViewsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="33" />
           <folding>
-            <element signature="e#430#471#0" />
-            <element signature="e#501#555#0" />
-            <element signature="e#595#649#0" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/web/Controllers/travelerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/ticketTransactionJs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="69" column="26" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
+        <state relative-caret-position="1005">
+          <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/jsCore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="64" column="43" selection-start-line="60" selection-start-column="8" selection-end-line="64" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/finalProject/Services/Converters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/AdminPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
+          <folding>
+            <element signature="e#141#179#0" />
+            <element signature="e#289#343#0" />
+            <element signature="e#383#437#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/DropDown.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="134" column="40" selection-start-line="134" selection-start-column="40" selection-end-line="134" selection-end-column="40" />
+          <folding>
+            <element signature="e#101#311#0" />
+            <element signature="e#349#391#0" />
+            <element signature="e#1817#1897#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/UserPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="149" column="18" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/UserPanel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="55" column="12" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
         </state>
       </provider>
     </entry>

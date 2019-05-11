@@ -1,5 +1,12 @@
 $(document).ready(function () {
 
+    function resetComment() {
+        let trToRemove = $('.comment')
+        trToRemove.each(function () {
+            $(this).remove()
+        })
+    };
+
     function TicketInfo() {
         $.get({
             url: 'http://localhost:8080/getData',
@@ -18,11 +25,9 @@ $(document).ready(function () {
             url: 'http://localhost:8080/getUser',
             contentType: 'application/json',
         }).done(function (user) {
-            console.log(user)
             $('#firstName').html(user.firstName)
             $('#lastName').html(user.lastName)
         }).fail(function (fail) {
-            console.log(fail)
         })
     }
 
@@ -40,8 +45,6 @@ $(document).ready(function () {
             url: 'http://localhost:8080/seats',
             contentType: 'application/json',
         }).done(function (seatList) {
-            console.log(seatList)
-
             seatList.forEach(function (elem) {
                 const newOption = $("<option>", {
                     class: "seat",
@@ -62,12 +65,24 @@ $(document).ready(function () {
             url: 'http://localhost:8080/TicketPurchase',
             contentType: 'application/json',
             data: JSON.stringify(seat)
-        }).done(function (e) {
-        console.log(e)
-            resetSeat()
-            getSeats()
-        }).fail(function (f) {
-            console.log(f)
+        }).done(function () {
+            resetSeat();
+            getSeats();
+            resetComment();
+            const comment1 = $("<p>", {
+                id: "comm1",
+                class: "comment",
+                text: "selected seat was booked for you"
+            })
+            $('#spotSelect').append(comment1)
+        }).fail(function () {
+            resetComment();
+            const comment2 = $("<p>", {
+                id: "comm2",
+                class: "comment",
+                text: "selected seat was NOT booked for you"
+            })
+            $('#spotSelect').append(comment2)
         })
-    })
+    });
 });

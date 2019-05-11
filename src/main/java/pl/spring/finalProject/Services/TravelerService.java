@@ -14,5 +14,9 @@ public interface TravelerService {
     boolean isAvailable(String login);
 
     Traveler findbyLogin(String login);
+
     HashMap getFirstAndLastName(String login);
+
+    TravelerDTO getTravelerData(String login);
+
 }

@@ -3,6 +3,7 @@ package pl.spring.finalProject.Services;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.WebUtils;
+import pl.spring.finalProject.DTOs.ReturnTicketsOfChosenTravelerDTO;
 import pl.spring.finalProject.Repositories.TicketRepository;
 import pl.spring.finalProject.domain.entities.Bus;
 import pl.spring.finalProject.domain.entities.Traveler;
@@ -14,10 +15,10 @@ import javax.transaction.Transactional;
 import javax.validation.constraints.NotNull;
 import java.security.Principal;
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class TicketServiceImpl implements TicketService {
-
 
     private TicketRepository ticketRepository;
     private TravelerService travelerService;
@@ -29,7 +30,6 @@ public class TicketServiceImpl implements TicketService {
         this.busService = busService;
     }
 
-
     @Override
     public ArrayList<Integer> seats(long id) {
         return ticketRepository.seats(id);
@@ -37,20 +37,16 @@ public class TicketServiceImpl implements TicketService {
 
     @Transactional
     @Override
-    public ResponseEntity<String> saveTicket(HttpServletRequest request, Principal principal, @NotNull Integer seatNumber) {
+    public ResponseEntity<String> saveTicket(HttpServletRequest request, @NotNull Principal principal, @NotNull Integer seatNumber) {
         String login = principal.getName();
         long id = getIdFromCookie(request);
-        return getStringResponseEntity(seatNumber, login, id);
-    }
-
-    private ResponseEntity<String> getStringResponseEntity(@NotNull Integer seatNumber, String login, long id) {
         if (id != 0 && login != null) {
             Traveler traveler = travelerService.findbyLogin(login);
             Bus bus = busService.findBusById(id);
-            if (ticketRepository.isSeatAvailable(seatNumber,bus)) {
+            if (ticketRepository.isSeatAvailable(seatNumber, bus)) {
                 ticketRepository.ticketUpdate(traveler, bus, seatNumber);
                 return ResponseEntity.ok("Reservation done");
-            }else {
+            } else {
                 return ResponseEntity.badRequest().body("something went wrong");
             }
         } else {
@@ -73,4 +69,20 @@ public class TicketServiceImpl implements TicketService {
         ticketChoice.setPath("/");
         response.addCookie(ticketChoice);
     }
+
+    @Override
+    public void createTicket(int seatNumber, Bus bus) {
+        ticketRepository.createTicket(seatNumber, bus);
+    }
+
+    @Override
+    public List<ReturnTicketsOfChosenTravelerDTO> findTicketsOfChosenTraveler(String login) {
+        return ticketRepository.findTicketsOfChosenTraveler(login);
+    }
+    @Transactional
+    @Override
+    public void removeUserFromTicket(long ticketId,String login) {
+        ticketRepository.removeUserFromTicket(ticketId,login);
+    }
+
 }

@@ -15,4 +15,14 @@ public interface BusService {
     public List<BusDTO> getBusDTOS(Railways start, Railways end, String date);
 
     List<ReturnResultFromGetConnectionsMethodDTO> findFullInfo(BusDTO busDTO);
+
+    boolean isBusConnectionAlreadyExist(BusDTO busDTO);
+
+    Bus ConvertBusDTOBeforeSave(BusDTO busDTO);
+
+    void saveBus(Bus bus);
+
+    Bus findBus(BusDTO busDTO);
+
+    void saveBus2(Bus bus);
 }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My profile</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-lightness/jquery-ui.css"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+        width: 300px;
+    }
+    .topText {
+    height: 200px;
+    background-color: rgba(0, 0, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 100px;
+}</style>
+</head>
+<body>
+<div class="topText">User Panel</div>
+<div id="welcome"></div>
+<div>What do you want to do?</div><br>
+<button id="changeName">I want to change my data</button>
+<button id="password">I want to change my password</button>
+<button id="travels">I want to check my travels</button>
+<div id="UserData">
+<table>
+    <tr>
+        <th></th>
+        <th>Your current Data</th>
+        <th>change your Data</th>
+    </tr>
+    <form id="DataChange">
+    <tr>
+        <td>First Name</td>
+        <td id="firstName"></td>
+        <td><input type="text" id="changeFirstName"></td>
+    </tr>
+    <tr>
+        <td> Last Name</td>
+        <td id="lastName"></td>
+        <td><input type="text" id="changeLastName"></td>
+    </tr>
+        <td>Email address</td>
+        <td id="email"></td>
+        <td><input type="email" id="changeEmail"></td>
+    </tr>
+        <tr>
+            <td colspan="3"><button class="btn btn-primary" id="sendData">change data</button></form></td>
+        </tr>
+</table>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/javascript" src="../static/js/UserPanel.js"></script>
+</body>
+</html>

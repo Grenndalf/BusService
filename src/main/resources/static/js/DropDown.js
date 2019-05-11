@@ -16,6 +16,10 @@ $(function () {
 
     }
 
+    function getVal(selector) {
+        return selector.val();
+    }
+
     function getSelectedStartPoint() {
         return $(':selected')[0];
     }
@@ -61,10 +65,6 @@ $(function () {
         });
     }
 
-    function getVal(selector) {
-        return selector.val();
-    }
-
     $('#TravelDate').datepicker({
         minDate: 0,
         maxDate: 100,
@@ -74,6 +74,7 @@ $(function () {
     ajaxDropdownList2()
 
     ajaxDropdownList()
+
     $('#DestinationPointList').selectmenu({ width : 400});
 
     $('#StartPointList').selectmenu({ width : 400});

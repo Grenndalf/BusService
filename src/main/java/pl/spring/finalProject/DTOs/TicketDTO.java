@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import pl.spring.finalProject.domain.entities.Bus;
 
 
 @Getter
@@ -14,5 +15,10 @@ public class TicketDTO {
 
     private int seatNumber;
     private TravelerDTO travelerDTO;
-    private BusDTO busDTO;
+    private Bus bus;
+
+    public TicketDTO(int seatNumber, Bus bus) {
+        this.seatNumber = seatNumber;
+        this.bus = bus;
+    }
 }

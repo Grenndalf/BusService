@@ -13,9 +13,11 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @ToString
 public class RailwaysDTO {
+
     @NotNull
     @NotBlank
     private String City;
+
     @NotNull
     @NotBlank
     private String RailwayAddress;

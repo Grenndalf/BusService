@@ -1,39 +1,29 @@
-<html lang="en" xmlns:th="http://www.springframework.org/schema/mvc">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>selectmenu demo</title>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-lightness/jquery-ui.css"
           rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <style>
-
-        .ui-datepicker {
-            background: lightyellow;
-        }
-
         .topText {
             height: 200px;
-            background-color: rgba(0, 0, 255, 0.1);
+            background-color: rgba(255, 253, 6, 0.31);
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             font-size: 100px;
         }
-        td, th {
-            border: 1px solid #dddddd;
-            text-align: center;
-            padding: 8px;
-            width: 300px;
-        }
+
     </style>
 </head>
 <body>
 <div class="topText">search for connections</div>
-<a href="http://localhost:8080/UserPanel">Check your Panel</a>
-<form id="sendMe">
+<form id="createConnection">
     <label><b>Travel from:</b></label>
     <select id="StartPointList">
         <option disabled="true">Select start Point</option>
@@ -44,27 +34,18 @@
     </select>
     <label>Travel Day:</label>
     <input type="text" id="TravelDate" autocomplete="off">
+    <label>departure Time:</label>
+    <input type="time" id="departureTime" autocomplete="off" value="00:00">
+    <label>Number of seats in bus:</label>
+    <input type="number" id="numberOfSeats" autocomplete="off" value="1">
     <button class="btn btn-primary">Submit</button>
 </form>
-<table class="table table-striped" id="results">
-    <thead class="thead-dark">
-    <tr id="header">
-        <th>Departure Railway Station</th>
-        <th>Target Railway Station </th>
-        <th>Date</th>
-        <th>Departure Time</th>
-        <th>Seats available</th>
-        <th>buy Ticket</th>
-    </tr>
-</table>
-<button id="test">abc</button>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<div class="topText">delete connection</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
         integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
         crossorigin="anonymous"></script>
-<script type="text/javascript" src="../static/js/DropDown.js"></script>
+<script type="text/javascript" src="../static/js/AdminPanel.js"></script>
 </body>
 </html>
