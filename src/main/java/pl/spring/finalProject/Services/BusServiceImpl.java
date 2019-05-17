@@ -120,5 +120,9 @@ public class BusServiceImpl implements BusService {
         busRepository.saveBus2(mnosa,deptTime,travelDate,ep,sp);
 
     }
+
+    public List<Bus> getAllBuses(){
+        return busRepository.findAll();
+    }
 }
 

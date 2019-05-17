@@ -7,6 +7,7 @@ import pl.spring.finalProject.DTOs.TravelerDTO;
 import pl.spring.finalProject.Repositories.TravelerRepository;
 import pl.spring.finalProject.domain.entities.Traveler;
 
+import javax.transaction.Transactional;
 import java.util.HashMap;
 
 @Service
@@ -43,4 +44,15 @@ public class TravelerServiceImpl implements TravelerService {
     public TravelerDTO getTravelerData(String login) {
         return Converters.convertTraveler(travelerRepository.getTravelerData(login));
     }
+
+    @Override
+    public HashMap getFirstAndLastnameAndEmailByLogin(String login) {
+        return travelerRepository.getFirstAndLastnameAndEmailByLogin(login);
+    }
+    @Transactional
+    @Override
+    public void updateUserData(String firstName, String lastName, String email, String login) {
+        travelerRepository.updateUserData(firstName, lastName, email, login);
+    }
+
 }

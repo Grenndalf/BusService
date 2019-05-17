@@ -8,15 +8,18 @@ import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import pl.spring.finalProject.Repositories.TravelerRepository;
 
 import javax.sql.DataSource;
 
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
+    private TravelerRepository travelerRepository;
     private DataSource dataSource;
 
-    public SecurityConfiguration(DataSource dataSource) {
+    public SecurityConfiguration(TravelerRepository travelerRepository, DataSource dataSource) {
+        this.travelerRepository = travelerRepository;
         this.dataSource = dataSource;
     }
 
@@ -53,9 +56,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/test")
                     .authenticated()
 //                .antMatchers("/AdminPanel", "/admin/**").hasRole("ADMIN")
-                .antMatchers("/register").permitAll()
+                .antMatchers("/registerForm").permitAll()
                     .and()
                         .formLogin()
+                            .loginPage("/login")
                             .defaultSuccessUrl("/default")
                             .failureUrl("/login?error").permitAll()
                     .and()

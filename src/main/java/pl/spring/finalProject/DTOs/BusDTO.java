@@ -5,11 +5,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Convert;
-import javax.validation.constraints.*;
+import javax.validation.constraints.FutureOrPresent;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -33,7 +34,6 @@ public class BusDTO {
     @NotNull
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     @JsonFormat (pattern = "dd/MM/yyyy")
-    @Convert ( converter = Jsr310JpaConverters.LocalDateConverter.class )
     private LocalDate travelDate;
 
     @Max ( 100 )

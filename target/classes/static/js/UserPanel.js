@@ -132,6 +132,7 @@ $(document).ready(function () {
     getTravels.click(function () {
         removeTicketTable()
         getTickets()
+        hideData()
     })
     getUserData.click(function () {
         removeTicketTable()
@@ -140,13 +141,15 @@ $(document).ready(function () {
             getVal($('#changeLastName')),
             getVal($('#changeEmail')));
 
-console.log(travelerDTO)
+        hideData();
+        })
+    function hideData() {
         if ($('#UserData').is(':hidden')) {
             $('#UserData').show()
         } else {
             $('#UserData').hide()
         }
-    })
+    }
     $('#DataChange').submit(function () {
         let travelerDTO = new inputs(
             getVal($('#changeFirstName')),
@@ -157,8 +160,20 @@ console.log(travelerDTO)
             url: 'http://localhost:8080/updateUser',
             data: JSON.stringify(travelerDTO),
             contentType: 'application/json'
-        }).done(function () {
-            console.log("hurra?")
+        }).done(function (e) {
+            console.log(e)
         })
+    })
+
+    $.get({
+        url: 'http://localhost:8080/userData'
+    }).done(function (e) {
+        $('#firstName').text(e.firstName)
+        $('#lastName').text(e.lastName)
+        $('#email').text(e.email)
+
+        $('#changeFirstName').val(e.firstName)
+        $('#changeLastName').val(e.lastName)
+        $('#changeEmail').val(e.email)
     })
 })

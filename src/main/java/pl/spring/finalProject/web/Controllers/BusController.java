@@ -9,8 +9,6 @@ import pl.spring.finalProject.Services.BusService;
 import pl.spring.finalProject.Services.Converters;
 import pl.spring.finalProject.Services.TicketService;
 import pl.spring.finalProject.domain.entities.Bus;
-import pl.spring.finalProject.domain.entities.Ticket;
-
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;

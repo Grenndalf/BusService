@@ -1,4 +1,3 @@
-
 $(function () {
 
     const ticketAdress = "http://localhost:8080/buyTicket/"
@@ -123,7 +122,7 @@ $(function () {
                         text: index.seatsAvailable
                     })
                 const column6 = $("<td>", {
-                    class: "tickedLink",
+                    class: "ticketLink",
                     html: "<a href=" + ticketAdress + index.busId + ">buy ticket</a>"
                 })
                 $('#results')
@@ -141,9 +140,4 @@ $(function () {
             console.log(e)
         })
     })
-
-    $('#test').click(function () {
-        console.log("hello")
-    })
-
 });

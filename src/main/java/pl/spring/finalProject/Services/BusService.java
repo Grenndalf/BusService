@@ -25,4 +25,6 @@ public interface BusService {
     Bus findBus(BusDTO busDTO);
 
     void saveBus2(Bus bus);
+
+    List<Bus> getAllBuses();
 }

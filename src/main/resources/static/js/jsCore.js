@@ -6,9 +6,6 @@ $(document).ready(function(){
     const password = $('input#password');
     const email = $('input#email');
 
-    const get = 'GET';
-    const deleteItem = 'DELETE';
-    const post = 'POST';
     const basicURL = 'http://localhost:8080/saveTraveler';
 
     let inputs = function (login, firstName, lastName, password,email) {
@@ -58,27 +55,21 @@ $(document).ready(function(){
             getVal(email)
         );
         console.log(travelerDTO)
-        $.ajax({
-            type: 'POST',
+        $.post({
             url: 'http://localhost:8080/saveTraveler',
             data: JSON.stringify(travelerDTO),
             contentType: 'application/json'
         }).done(function () {
             resetComment()
-            const comment1 = $("<p>",{
-                id: "comm1",
-                class: "comment",
-                text: "you have been registered"
-            })
-            $('#formular').append(comment1)
+            window.location.replace("http://localhost:8080/searchConnections");
         }).fail(function () {
             resetComment()
-            const comment2 = $("<p>",{
+            const comment = $("<p>",{
                 id: "comm2",
                 class: "comment",
                 text: "you have been NOT registered"
             })
-            $('#formular').append(comment2)
+            $('#formular').append(comment)
         })
     })
 });

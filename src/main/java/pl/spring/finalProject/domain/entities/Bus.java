@@ -12,10 +12,10 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.List;
 
 @Entity
 @Table
+//        (uniqueConstraints={@UniqueConstraint(columnNames = {"end_point_id","start_point_id"})})
 @Getter
 @Setter
 @NoArgsConstructor
@@ -73,9 +73,6 @@ public class Bus {
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     @JsonFormat (pattern = "dd/MM/yyyy")
     private LocalDate travelDate;
-
-    @OneToMany ( cascade = {CascadeType.ALL}, mappedBy = "bus" )
-    private List<Ticket> ticketList;
 
     @FutureOrPresent
     @JsonFormat (pattern = "HH:mm")

@@ -59,6 +59,13 @@ $(document).ready(function () {
         });
     }
 
+    function resetComment() {
+        let trToRemove = $('.comment')
+        trToRemove.each(function () {
+            $(this).remove()
+        })
+    };
+
     ajaxDropdownList2()
 
     ajaxDropdownList()
@@ -88,8 +95,22 @@ $(document).ready(function () {
             })
         }).done(function (e) {
             console.log(e)
+            resetComment()
+            const comment1 = $("<p>", {
+                id: "comm1",
+                class: "comment",
+                text: e
+            })
+            comment1.insertAfter($('#createConnection'))
         }).fail(function (f) {
             console.log(f)
+            resetComment()
+            const comment2 = $("<p>", {
+                id: "comm2",
+                class: "comment",
+                text: "connection was not saved"
+            })
+            comment2.insertAfter($('#createConnection'))
         })
     })
 })

@@ -19,4 +19,7 @@ public interface TravelerService {
 
     TravelerDTO getTravelerData(String login);
 
+    HashMap getFirstAndLastnameAndEmailByLogin (String login);
+
+    void updateUserData(String firstName,String lastName,String email,String login);
 }

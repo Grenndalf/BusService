@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: pl.spring.finalProject.FinalProjectApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.213 s - in pl.spring.finalProject.FinalProjectApplicationTests
