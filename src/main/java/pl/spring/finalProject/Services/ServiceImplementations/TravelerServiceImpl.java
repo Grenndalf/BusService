@@ -1,10 +1,12 @@
-package pl.spring.finalProject.Services;
+package pl.spring.finalProject.Services.ServiceImplementations;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import pl.spring.finalProject.DTOs.TravelerDTO;
 import pl.spring.finalProject.Repositories.TravelerRepository;
+import pl.spring.finalProject.Services.Converters;
+import pl.spring.finalProject.Services.TravelerService;
 import pl.spring.finalProject.domain.entities.Traveler;
 
 import javax.transaction.Transactional;

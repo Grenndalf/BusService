@@ -1,9 +1,12 @@
-package pl.spring.finalProject.Services;
+package pl.spring.finalProject.Services.ServiceImplementations;
 
 import org.springframework.stereotype.Service;
 import pl.spring.finalProject.DTOs.BusDTO;
 import pl.spring.finalProject.DTOs.ReturnResultFromGetConnectionsMethodDTO;
 import pl.spring.finalProject.Repositories.BusRepository;
+import pl.spring.finalProject.Services.BusService;
+import pl.spring.finalProject.Services.Converters;
+import pl.spring.finalProject.Services.RailwaysService;
 import pl.spring.finalProject.domain.entities.Bus;
 import pl.spring.finalProject.domain.entities.Railways;
 

@@ -33,11 +33,6 @@ public class ViewsController {
         return "UserPanel";
     }
 
-    @RequestMapping ( "/logowanie" )
-    public String logowanie() {
-        return "testyLogowania";
-    }
-
     @RequestMapping ( "/default" )
     public String defaultAfterLogin(HttpServletRequest request) {
         if (request.isUserInRole("ROLE_ADMIN")) {

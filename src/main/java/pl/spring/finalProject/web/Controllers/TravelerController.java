@@ -26,22 +26,22 @@ public class TravelerController {
 
     @CrossOrigin
     @RequestMapping (value = "/saveTraveler")
-    public ResponseEntity<?> postSample(@Valid @RequestBody TravelerDTO travelerDTO) {
+    public ResponseEntity<?> saveUser(@Valid @RequestBody TravelerDTO travelerDTO) {
 
-     if (!travelerService.isAvailable(travelerDTO.getLogin())) {
-         return ResponseEntity.badRequest().body("This login already exist");
-     }
+//     if (!travelerService.isAvailable(travelerDTO.getLogin())) {
+//         return ResponseEntity.badRequest().body("This login already exist");
+//     }
         travelerService.saveNewTraveler(travelerDTO);
-        System.out.println(travelerDTO.getEmail());
-        SimpleMailMessage message = new SimpleMailMessage();
-        message.setTo(travelerDTO.getEmail());
-        message.setFrom("b.olczak4@wp.pl");
-        message.setSubject("Test wysyłki");
-        message.setText("Jakie to wszystko jest proste :) ");
-
-        // Wysyłamy obiekt typu SimpleMimeMessage z użyciem bean'a MailSender
-        mailSender.send(message);
-        System.out.println("wyslano");
+//        System.out.println(travelerDTO.getEmail());
+//        SimpleMailMessage message = new SimpleMailMessage();
+//        message.setTo(travelerDTO.getEmail());
+//        message.setFrom("b.olczak4@wp.pl");
+//        message.setSubject("Test wysyłki");
+//        message.setText("Jakie to wszystko jest proste :) ");
+//
+//        // Wysyłamy obiekt typu SimpleMimeMessage z użyciem bean'a MailSender
+//        mailSender.send(message);
+//        System.out.println("wyslano");
         return ResponseEntity.ok("user Saved");
     }
 

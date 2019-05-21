@@ -1,10 +1,13 @@
-package pl.spring.finalProject.Services;
+package pl.spring.finalProject.Services.ServiceImplementations;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.WebUtils;
 import pl.spring.finalProject.DTOs.ReturnTicketsOfChosenTravelerDTO;
 import pl.spring.finalProject.Repositories.TicketRepository;
+import pl.spring.finalProject.Services.BusService;
+import pl.spring.finalProject.Services.TicketService;
+import pl.spring.finalProject.Services.TravelerService;
 import pl.spring.finalProject.domain.entities.Bus;
 import pl.spring.finalProject.domain.entities.Traveler;
 
