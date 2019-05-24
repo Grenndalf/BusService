@@ -6,13 +6,14 @@ import pl.spring.finalProject.DTOs.ReturnResultFromGetConnectionsMethodDTO;
 import pl.spring.finalProject.domain.entities.Bus;
 import pl.spring.finalProject.domain.entities.Railways;
 
+import java.time.LocalDate;
 import java.util.List;
 @Service
 public interface BusService {
 
     Bus findBusById(long id);
     public List<BusDTO> busListConverter(List<Bus> busList);
-    public List<BusDTO> getBusDTOS(Railways start, Railways end, String date);
+    public List<BusDTO> getBusDTOS(Railways start, Railways end, LocalDate date);
 
     List<ReturnResultFromGetConnectionsMethodDTO> findFullInfo(BusDTO busDTO);
 

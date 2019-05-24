@@ -8,6 +8,7 @@ import pl.spring.finalProject.DTOs.ReturnResultFromGetConnectionsMethodDTO;
 import pl.spring.finalProject.domain.entities.Bus;
 import pl.spring.finalProject.domain.entities.Railways;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
@@ -17,14 +18,14 @@ public interface BusRepository extends JpaRepository<Bus, Long> {
     Bus findById(long id);
 
     @Query ( value = "select * FROM bus where start_point_id=:sp and end_point_id=:ep and travel_date=:dateInput", nativeQuery = true )
-    List<Bus> findConnections(long sp, long ep, String dateInput);
+    List<Bus> findConnections(long sp, long ep, LocalDate dateInput);
 
     @Query ( name = "ConnectionFounderQuery", nativeQuery = true )
     List<ReturnResultFromGetConnectionsMethodDTO> findFullInfo(String spCity,
                                                                String spRailwayAddress,
                                                                String epCity,
                                                                String epRailwayAddress,
-                                                               String travelDate
+                                                               LocalDate travelDate
     );
 
 //      check comment in busServiceImpl class
@@ -51,17 +52,17 @@ public interface BusRepository extends JpaRepository<Bus, Long> {
             "and ep.railway_address=?4 " +
             "and b.travel_date=?5 " +
             "and b.departure_time=?6 ", nativeQuery = true )
-    Integer isBusConnectionAlreadyExist2(String spCity, String spRailwayAddress, String epCity, String epRailwayAddress, String travelDate, LocalTime departureTime);
+    boolean isBusConnectionAlreadyExist2(String spCity, String spRailwayAddress, String epCity, String epRailwayAddress, LocalDate travelDate, LocalTime departureTime);
 
     @Query ( value = "select * from bus b where" +
             " b.start_point_id=?1" +
             " and b.end_point_id =?2" +
             " and b.travel_date=?3" +
             " and b.departure_time=?4", nativeQuery = true )
-    Bus findBus(Railways startPoint, Railways endPoint, String travelDate, LocalTime departureTime);
+    Bus findBus(Railways startPoint, Railways endPoint, LocalDate travelDate, LocalTime departureTime);
 
     @Modifying
     @Query ( value = "INSERT into bus (max_number_of_seats_available,departure_time,travel_date,end_point_id,start_point_id) VALUES(?1,?2,?3,?4,?5)", nativeQuery = true )
-    public void saveBus2(Integer mnosa, LocalTime deptTime, String travelDate, Railways ep, Railways sp);
+    public void saveBus2(Integer mnosa, LocalTime deptTime, LocalDate travelDate, Railways ep, Railways sp);
 
 }

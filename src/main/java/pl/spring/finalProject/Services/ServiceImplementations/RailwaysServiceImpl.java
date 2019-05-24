@@ -6,13 +6,12 @@ import pl.spring.finalProject.Repositories.RailwaysRepository;
 import pl.spring.finalProject.Services.Converters;
 import pl.spring.finalProject.Services.RailwaysService;
 import pl.spring.finalProject.domain.entities.Railways;
-
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
 public class RailwaysServiceImpl implements RailwaysService {
-
     private RailwaysRepository railwaysRepository;
 
     public RailwaysServiceImpl(RailwaysRepository railwaysRepository) {
@@ -21,16 +20,17 @@ public class RailwaysServiceImpl implements RailwaysService {
 
     @Override
     public List<RailwaysDTO> railwaysListConverter() {
-        List<RailwaysDTO> result = railwaysRepository.findAll()
+
+
+        return railwaysRepository.findAll()
                 .stream()
                 .map(Converters::convertRailways)
+                .sorted(Comparator.comparing(RailwaysDTO::getCity))
                 .collect(Collectors.toList());
-        return result;
     }
 
     @Override
     public Railways findRailwaysBasedOnRailwayDTO(RailwaysDTO railwaysDTO) {
-        Railways result = railwaysRepository.findByCityAndRailwayAddress(railwaysDTO.getCity(),railwaysDTO.getRailwayAddress());
-        return result;
+        return railwaysRepository.findByCityAndRailwayAddress(railwaysDTO.getCity(), railwaysDTO.getRailwayAddress());
     }
 }

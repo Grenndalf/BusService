@@ -8,18 +8,14 @@ import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import pl.spring.finalProject.Repositories.TravelerRepository;
-
 import javax.sql.DataSource;
 
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-    private TravelerRepository travelerRepository;
     private DataSource dataSource;
 
-    public SecurityConfiguration(TravelerRepository travelerRepository, DataSource dataSource) {
-        this.travelerRepository = travelerRepository;
+    public SecurityConfiguration(DataSource dataSource) {
         this.dataSource = dataSource;
     }
 
@@ -49,14 +45,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/searchConnections")
-                    .hasRole("USER")
-                .antMatchers("/yourTicket")
-                    .authenticated()
-                .antMatchers("/test")
-                    .authenticated()
+                .antMatchers("/searchConnections").authenticated()
+                .antMatchers("/yourTicket").authenticated()
                 .antMatchers("/AdminPanel", "/admin/**").hasRole("ADMIN")
                 .antMatchers("/registerForm").permitAll()
+                .antMatchers("/UserPanel").hasRole("USER")
+//                .antMatchers("/**").authenticated()
                     .and()
                         .formLogin()
                             .defaultSuccessUrl("/default")

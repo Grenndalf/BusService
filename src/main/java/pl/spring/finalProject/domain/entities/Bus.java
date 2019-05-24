@@ -41,7 +41,7 @@ import java.time.LocalTime;
                 "and re.railway_address=:epRailwayAddress " +
                 "and b.travel_date=:travelDate " +
                 "and t.ticket_owner IS NULL " +
-                "GROUP BY b.id", resultSetMapping = "MySuperHiperResultSet" )
+                "GROUP BY b.id,rs.city, rs.railway_address, re.city, re.railway_address, b.departure_time, b.travel_date", resultSetMapping = "MySuperHiperResultSet" )
 @SqlResultSetMapping ( name = "MySuperHiperResultSet",
         classes = @ConstructorResult ( targetClass = ReturnResultFromGetConnectionsMethodDTO.class,
                 columns = {

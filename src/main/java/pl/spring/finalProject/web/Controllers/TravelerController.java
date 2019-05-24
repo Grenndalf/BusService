@@ -16,33 +16,20 @@ import java.util.HashMap;
 @RestController
 public class TravelerController {
 
-    private MailSender mailSender;
     private TravelerService travelerService;
 
-    public TravelerController(MailSender mailSender, TravelerService travelerService) {
-        this.mailSender = mailSender;
+    public TravelerController(TravelerService travelerService) {
         this.travelerService = travelerService;
     }
 
     @CrossOrigin
     @RequestMapping (value = "/saveTraveler")
     public ResponseEntity<?> saveUser(@Valid @RequestBody TravelerDTO travelerDTO) {
-
-//     if (!travelerService.isAvailable(travelerDTO.getLogin())) {
-//         return ResponseEntity.badRequest().body("This login already exist");
-//     }
+        if (travelerService.isAvailable(travelerDTO.getLogin())){
         travelerService.saveNewTraveler(travelerDTO);
-//        System.out.println(travelerDTO.getEmail());
-//        SimpleMailMessage message = new SimpleMailMessage();
-//        message.setTo(travelerDTO.getEmail());
-//        message.setFrom("b.olczak4@wp.pl");
-//        message.setSubject("Test wysyłki");
-//        message.setText("Jakie to wszystko jest proste :) ");
-//
-//        // Wysyłamy obiekt typu SimpleMimeMessage z użyciem bean'a MailSender
-//        mailSender.send(message);
-//        System.out.println("wyslano");
         return ResponseEntity.ok("user Saved");
+    }else
+        return ResponseEntity.badRequest().body("this login is already in use");
     }
 
     @RequestMapping ( "/getUser" )

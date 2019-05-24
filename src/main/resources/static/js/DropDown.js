@@ -1,10 +1,10 @@
 $(function () {
 
-    const ticketAdress = "http://localhost:8080/buyTicket/"
+    const ticketAdress = "http://localhost:8080/buyTicket/";
     function resetTr() {
-        let trToRemove = $('#results tr').siblings('tr')
+        let trToRemove = $('#results tr').siblings('tr');
         trToRemove.each(function () {
-            if ($(this).attr('id') != "header") {
+            if ($(this).attr('id') !== "header") {
                 $(this).remove()
             }
         })
@@ -96,7 +96,7 @@ $(function () {
                 "travelDate":getVal($('#TravelDate'))
             })
         }).done(function (resultList) {
-             resetTr()
+             resetTr();
             resultList.forEach(function (index) {
                 const row = $("<tr>", {
                         class: "result",
@@ -108,23 +108,23 @@ $(function () {
                 const column2 = $("<td>",{
                         class: "arrivalTo",
                     html: "<b>" + index.endPointCity + "</b>" + ", " + index.endpointRailwayAddress
-                    })
+                });
                 const column3 = $("<td>",{
                     class: "travelDay",
                     text: index.travelDate
-                })
+                });
                 const column4 = $("<td>", {
                     class: "travelTime",
                     text: index.departureTime.substring(0, 5)
-                    })
+                });
                 const column5 = $("<td>",{
                     class: "seatsAvailable",
                         text: index.seatsAvailable
-                    })
+                });
                 const column6 = $("<td>", {
                     class: "ticketLink",
                     html: "<a href=" + ticketAdress + index.busId + ">buy ticket</a>"
-                })
+                });
                 $('#results')
                     .append(row
                         .append(column1)

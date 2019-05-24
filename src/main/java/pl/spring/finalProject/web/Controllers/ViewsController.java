@@ -12,6 +12,10 @@ public class ViewsController {
     public String registry() {
         return "register";
     }
+    @RequestMapping("/")
+    public String startPage() {
+        return "register";
+    }
 
     @RequestMapping("/searchConnections")
     public String connections() {
@@ -31,6 +35,11 @@ public class ViewsController {
     @RequestMapping ( "/UserPanel" )
     public String UserTools() {
         return "UserPanel";
+    }
+
+    @RequestMapping ( "/testFile" )
+    public String testFile() {
+        return "footer&header/testFile";
     }
 
     @RequestMapping ( "/default" )

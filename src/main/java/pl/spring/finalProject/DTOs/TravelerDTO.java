@@ -6,6 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 import pl.spring.finalProject.Services.validationGroup;
 
+import javax.persistence.Column;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -17,7 +18,7 @@ import javax.validation.groups.Default;
 @NoArgsConstructor
 @ToString
 public class TravelerDTO {
-
+    @Column (unique = true, nullable = false)
     @NotNull(message = "can not be empty")
     @Size(min = 3, max = 10,message = "length has to be between 3 and 10")
     private String login;
