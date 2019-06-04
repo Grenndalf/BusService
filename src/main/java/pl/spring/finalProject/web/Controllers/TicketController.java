@@ -1,6 +1,5 @@
 package pl.spring.finalProject.web.Controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,7 +9,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.util.WebUtils;
 import pl.spring.finalProject.DTOs.ReturnTicketsOfChosenTravelerDTO;
 import pl.spring.finalProject.Services.TicketService;
-
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,8 +20,11 @@ import java.util.List;
 @Controller
 public class TicketController {
 
-    @Autowired
-    private TicketService ticketService;
+    private final TicketService ticketService;
+
+    public TicketController(TicketService ticketService) {
+        this.ticketService = ticketService;
+    }
 
     @RequestMapping ( "/buyTicket/{busId}" )
     public String buyTicket(@PathVariable ( "busId" ) long id, HttpServletResponse response) {
@@ -35,6 +36,7 @@ public class TicketController {
     @ResponseBody
     public ArrayList<Integer> seatsAvailability(HttpServletRequest request) {
         Cookie id = WebUtils.getCookie(request, "ticketChoice");
+        assert id != null;
         return ticketService.seats(Long.valueOf(id.getValue()));
     }
 
@@ -48,7 +50,6 @@ public class TicketController {
     @ResponseBody
     public List<ReturnTicketsOfChosenTravelerDTO> userReservations(@NotNull Principal principal) {
 
-        System.out.println(principal.getName());
         return ticketService.findTicketsOfChosenTraveler(principal.getName());
     }
 

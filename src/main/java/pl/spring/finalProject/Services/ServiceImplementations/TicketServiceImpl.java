@@ -40,7 +40,7 @@ public class TicketServiceImpl implements TicketService {
 
     @Transactional
     @Override
-    public ResponseEntity<String> saveTicket(HttpServletRequest request, @NotNull Principal principal, @NotNull Integer seatNumber) {
+    public void saveTicket(HttpServletRequest request, @NotNull Principal principal, @NotNull Integer seatNumber) {
         String login = principal.getName();
         long id = getIdFromCookie(request);
         if (id != 0 && login != null) {
@@ -48,12 +48,12 @@ public class TicketServiceImpl implements TicketService {
             Bus bus = busService.findBusById(id);
             if (ticketRepository.isSeatAvailable(seatNumber, bus)) {
                 ticketRepository.ticketUpdate(traveler, bus, seatNumber);
-                return ResponseEntity.ok("Reservation done");
+                ResponseEntity.ok("Reservation done");
             } else {
-                return ResponseEntity.badRequest().body("something went wrong");
+                ResponseEntity.badRequest().body("something went wrong");
             }
         } else {
-            return ResponseEntity.badRequest().body("something went wrong");
+            ResponseEntity.badRequest().body("something went wrong");
         }
     }
 

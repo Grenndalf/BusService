@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    const form = $('#form');
     const login = $('input#login');
     const firstName = $('input#firstName');
     const lastName = $('input#lastName');
@@ -36,15 +36,15 @@ $(document).ready(function () {
                 class: "comment",
                 text: "passwords are not the same!"
             });
-            $('#form').append(comment1);
+            form.append(comment1);
             return true;
         } else {
             return false;
         }
     }
 
-    $('#form').submit(function (form) {
-        form.preventDefault();
+    form.submit(function (sendForm) {
+        sendForm.preventDefault();
         if (passwordValidator()) {
             return;
         }
@@ -69,7 +69,7 @@ $(document).ready(function () {
                 class: "comment",
                 text: "you have been NOT registered"
             });
-            $('#form').append(comment)
+            form.append(comment)
         })
     })
 });

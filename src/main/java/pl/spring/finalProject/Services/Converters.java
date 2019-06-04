@@ -1,13 +1,22 @@
 package pl.spring.finalProject.Services;
 
+import pl.spring.finalProject.DTOs.AnnouncementsDTO;
 import pl.spring.finalProject.DTOs.BusDTO;
 import pl.spring.finalProject.DTOs.RailwaysDTO;
 import pl.spring.finalProject.DTOs.TravelerDTO;
+import pl.spring.finalProject.domain.entities.Announcements;
 import pl.spring.finalProject.domain.entities.Bus;
 import pl.spring.finalProject.domain.entities.Railways;
 import pl.spring.finalProject.domain.entities.Traveler;
 
 public class Converters {
+
+    public static Announcements convertAnnouncementDTO(AnnouncementsDTO announcementsDTO) {
+        Announcements announcements = new Announcements();
+        announcements.setTitle(announcementsDTO.getTitle());
+        announcements.setContent(announcementsDTO.getContent());
+        return announcements;
+    }
 
     public static RailwaysDTO convertRailways(Railways railways) {
         RailwaysDTO railwaysDTO = new RailwaysDTO();

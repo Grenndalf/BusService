@@ -1,6 +1,5 @@
 package pl.spring.finalProject.Services.ServiceImplementations;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import pl.spring.finalProject.DTOs.TravelerDTO;
@@ -15,10 +14,15 @@ import java.util.HashMap;
 @Service
 public class TravelerServiceImpl implements TravelerService {
 
-    @Autowired
+
     private TravelerRepository travelerRepository;
-    @Autowired
-    PasswordEncoder passwordEncoder;
+
+    private PasswordEncoder passwordEncoder;
+
+    public TravelerServiceImpl(TravelerRepository travelerRepository, PasswordEncoder passwordEncoder) {
+        this.travelerRepository = travelerRepository;
+        this.passwordEncoder = passwordEncoder;
+    }
 
     @Override
     public void saveNewTraveler(TravelerDTO travelerDTO) {

@@ -1,6 +1,6 @@
 $(document).ready(function () {
     const requiredFieldText = "this field is required";
-    $('#formular').validate({
+    $('form').validate({
         rules: {
             login: {
                 required: true,
@@ -60,5 +60,6 @@ $(document).ready(function () {
             },
         }
     });
-        $('#someFooter').load("testFile");
+
+
 });

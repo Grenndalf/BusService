@@ -1,0 +1,155 @@
+#comm2 {
+    color: red;
+    text-align: center;
+}
+
+div#containerMods {
+    margin-left: auto;
+    margin-right: auto;
+}
+div#someDiv{
+    float: left;
+    width: 20%;
+    height: 200px;
+}
+
+H1 {
+    text-align: center;
+    vertical-align: middle;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.menu-area li a {
+    text-decoration: none;
+}
+
+.menu-area li {
+    list-style-type: none;
+}
+
+nav {
+    height: 50px;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background: dodgerblue;
+    z-index: 1;
+    text-align: right;
+    padding: 10px 2% 10px 0;
+}
+
+.logo1 {
+    width: 15%;
+    float: left;
+    color: #fff;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 2%;
+    margin-top: -5px;
+}
+
+.menu-area li {
+    display: inline-block;
+}
+
+.menu-area a {
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    padding: 0 25px;
+    font-size: 14px;
+    line-height: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-area a:hover {
+    background: tomato;
+    color: #fff;
+}
+.error
+{
+    color: red;
+    font-weight: normal;
+}
+#container{
+    height: 50px;
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+    background-color: dodgerblue;
+    margin-top: 150px;
+}
+.announcement{
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    word-wrap:break-word;
+}
+.line{
+    width: 1000px;
+    border-bottom: cadetblue solid 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.line2{
+    clear: both;
+    width: 800px;
+    border-bottom: gray solid 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.announContainer{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title{
+    margin-top: 15px;
+    width: 400px;
+    float: left;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.date{
+    text-align: right;
+    width: 55px;
+    margin-top: 30px;
+    float: left;
+    font-size: 10px;
+    color: darkgray;
+    margin-left: 345px;
+
+}
+.content{
+    clear: both;
+    word-wrap:break-word;
+}
+.formStyling{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1380px;
+    margin-top: 20px;
+}
+#results{
+    margin-top: 20px;
+    width: 1390px;
+    margin-left: auto;
+    margin-right: auto;
+}

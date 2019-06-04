@@ -12,6 +12,7 @@ import pl.spring.finalProject.domain.entities.Railways;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -50,7 +51,9 @@ public class BusServiceImpl implements BusService {
         String ec = busDTO.getEndPoint().getCity();
         String era = busDTO.getEndPoint().getRailwayAddress();
 
-        return busRepository.findFullInfo(sc,sra,ec,era,day);
+        return busRepository.findFullInfo(sc, sra, ec, era, day).stream()
+                .sorted(Comparator.comparing(ReturnResultFromGetConnectionsMethodDTO::getDepartureTime))
+                .collect(Collectors.toList());
     }
 
     @Override
