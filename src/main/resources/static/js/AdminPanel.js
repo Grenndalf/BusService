@@ -1,5 +1,11 @@
 $(document).ready(function () {
 
+    const basicURL = "http://localhost:8080";
+    const railways = "/getRailways";
+    const newConnection = "/newConnection";
+
+
+
     function getSelectedEndPoint() {
         return $(':selected')[1];
     }
@@ -27,9 +33,8 @@ $(document).ready(function () {
     }).datepicker("setDate", new Date());
 
     function ajaxDropdownList() {
-        $.ajax({
-            type: 'GET',
-            url: 'http://localhost:8080/getRailways',
+        $.get({
+            url: basicURL.concat(railways),
             contentType: 'application/json',
         }).done(function (jsons) {
             jsons.forEach(function (json) {
@@ -46,7 +51,7 @@ $(document).ready(function () {
     function ajaxDropdownList2() {
         $.ajax({
             type: 'GET',
-            url: 'http://localhost:8080/getRailways',
+            url: basicURL.concat(railways),
             contentType: 'application/json',
         }).done(function (jsons) {
             jsons.forEach(function (json) {
@@ -78,7 +83,7 @@ $(document).ready(function () {
         let departureTime = getVal($('#departureTime'));
         let numberOfSeats = getVal($('#numberOfSeats'));
         $.post({
-            url: 'http://localhost:8080/newConnection',
+            url: basicURL.concat(newConnection),
             contentType: 'application/json',
             data: JSON.stringify({
                 "startPoint": {
@@ -94,7 +99,6 @@ $(document).ready(function () {
                 "maxNumberOfSeatsAvailable": numberOfSeats
             })
         }).done(function (e) {
-            console.log(e);
             resetComment();
             const comment1 = $("<p>", {
                 id: "comm1",
@@ -102,8 +106,8 @@ $(document).ready(function () {
                 text: e
             });
             comment1.insertAfter($('#createConnection'))
-        }).fail(function (f) {
-            console.log(f);
+        }).fail(function (fail) {
+            console.log(fail);
             resetComment();
             const comment2 = $("<p>", {
                 id: "comm2",

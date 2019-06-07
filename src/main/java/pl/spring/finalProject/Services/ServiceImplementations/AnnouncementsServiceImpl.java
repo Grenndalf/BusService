@@ -25,8 +25,8 @@ public class AnnouncementsServiceImpl implements AnnouncementsService {
         announcementsRepository.save(Converters.convertAnnouncementDTO(announcementsDTO));
     }
 
-    public List<Announcements> getAnnouncement() {
+    public List<AnnouncementsDTO> getAnnouncement() {
         return announcementsRepository.findFirst5ByOrderByIdDesc().stream()
-                .sorted(Comparator.comparing(Announcements::getId).reversed()).collect(Collectors.toList());
+                .sorted(Comparator.comparing(Announcements::getId).reversed()).map(Converters::convertAnnouncement).collect(Collectors.toList());
     }
 }

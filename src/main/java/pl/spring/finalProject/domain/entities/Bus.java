@@ -14,8 +14,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Entity
-@Table
-//        (uniqueConstraints={@UniqueConstraint(columnNames = {"end_point_id","start_point_id"})})
+@Table (uniqueConstraints={@UniqueConstraint(columnNames = {"end_point_id","start_point_id"})})
 @Getter
 @Setter
 @NoArgsConstructor

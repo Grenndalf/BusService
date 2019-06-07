@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pl.spring.finalProject.DTOs.AnnouncementsDTO;
 import pl.spring.finalProject.Services.AnnouncementsService;
-import pl.spring.finalProject.domain.entities.Announcements;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -25,9 +24,9 @@ public class AnnouncementsController {
         announcementsService.saveAnnouncement(announcementsDTO);
     }
 
-    @RequestMapping ("/getAllAnnoucements")
+    @RequestMapping ( "/getAllAnnouncements" )
     @ResponseBody
-    public List<Announcements> getAllAnnouncements(){
+    public List<AnnouncementsDTO> getAllAnnouncements() {
        return announcementsService.getAnnouncement();
     }
 }

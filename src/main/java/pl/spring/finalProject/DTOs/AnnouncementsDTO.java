@@ -1,6 +1,7 @@
 package pl.spring.finalProject.DTOs;
 
 import lombok.*;
+import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.Column;
 import javax.persistence.Lob;
@@ -16,10 +17,12 @@ public class AnnouncementsDTO {
 
     @NotNull
     @NotBlank
+    @Length(max=150)
     private String title;
 
     @NotNull
     @NotBlank
+    @Length(max = 1500)
     @Column (columnDefinition="TEXT")
     private String content;
 

@@ -1,16 +1,15 @@
+div#containerMods {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
 #comm2 {
     color: red;
     text-align: center;
-}#comm1 {
-    color: green;
+}
+H2 {
     text-align: center;
 }
-
-H1 {
-    text-align: center;
-    vertical-align: middle;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -73,78 +72,14 @@ nav {
     background: tomato;
     color: #fff;
 }
-
-#secondHeader {
-    height: 50px;
-    width: 750px;
-    margin-left: auto;
-    margin-right: auto;
-    color: #ffffff;
-    background-color: dodgerblue;
-    margin-top: 150px;
-}
-.announcement{
-    line-height: 50px;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bolder;
-    word-wrap:break-word;
-}
-.line{
-    width: 1000px;
-    border-bottom: cadetblue solid 1px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.line2{
+.error
+{
     clear: both;
-    width: 800px;
-    border-bottom: gray solid 1px;
-    margin-left: auto;
-    margin-right: auto;
+    color: red;
+    font-weight: normal;
 }
-.announContainer{
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.title{
-    margin-top: 15px;
-    width: 400px;
-    float: left;
-    text-align: left;
-    font-size: 20px;
-    font-weight: bolder;
-}
-.date{
-    text-align: right;
-    width: 55px;
-    margin-top: 30px;
-    float: left;
-    font-size: 10px;
-    color: darkgray;
-    margin-left: 345px;
-
-}
-.content{
-    clear: both;
-    word-wrap:break-word;
-}
-.formStyling{
-    margin-left: auto;
-    margin-right: auto;
-    width: 1390px;
-    margin-top: 20px;
-}
-#results{
-    margin-top: 20px;
-    width: 1390px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/*login page css below*/
-#container {
+#container
+{
     background-color: white;
     width: 400px;
     height: 300px;
@@ -152,18 +87,18 @@ nav {
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
-    -webkit-box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
-    -moz-box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
-    box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
+    -webkit-box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9);
+    -moz-box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9);
+    box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9);
 }
 
 input[type=text],
 input[type=password],
-input[type=email] {
-    width: 300px;
+input[type=email]
+{
+    width: 100%;
     background-color: ghostwhite;
-    color: #666;
-    border: 2px solid #ddd;
+    border: 2px solid darkgray;
     border-radius: 5px;
     font-size: 20px;
     padding: 10px;
@@ -176,7 +111,8 @@ input[type=email] {
 
 input[type=text]:focus,
 input[type=password]:focus,
-input[type=email]:focus {
+input[type=email]:focus
+{
     -webkit-box-shadow: 0 0 10px 2px dodgerblue;
     -moz-box-shadow: 0 0 10px 2px dodgerblue;
     box-shadow: 0 0 10px 2px dodgerblue;
@@ -184,12 +120,13 @@ input[type=email]:focus {
     color: dodgerblue;
 }
 
-input[type=submit] {
+input[type=submit]
+{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     background-color: dodgerblue;
-    font-size: 20px;
+    font-size:20px;
     color: white;
     padding: 10px 10px;
     margin-top: 20px;
@@ -200,54 +137,47 @@ input[type=submit] {
     outline: none;
 }
 
-#TravelDate {
-    width: 150px;
-    text-align: center;
+input[type=submit]:focus
+{
+    -webkit-box-shadow: 0 0 15px 5px dodgerblue;
+    -moz-box-shadow: 0 0 15px 5px dodgerblue;
+    box-shadow: 0 0 15px 5px dodgerblue;
 }
 
-
-input::-webkit-input-placeholder {
+input::-webkit-input-placeholder
+{
     color: dodgerblue;
 }
-
-input:focus::-webkit-input-placeholder {
+input:focus::-webkit-input-placeholder
+{
     color: dodgerblue;
 }
-
 /* Firefox < 19 */
-input:-moz-placeholder {
+input:-moz-placeholder
+{
     color: dodgerblue;
 }
-
-input:focus:-moz-placeholder {
+input:focus:-moz-placeholder
+{
     color: dodgerblue;
 }
-
 /* Firefox > 19 */
-input::-moz-placeholder {
+input::-moz-placeholder
+{
     color: dodgerblue;
 }
-
-input:focus::-moz-placeholder {
+input:focus::-moz-placeholder
+{
     color: dodgerblue;
 }
-
 /* Internet Explorer 10 */
-input:-ms-input-placeholder {
+input:-ms-input-placeholder
+{
+    color: dodgerblue;
+}
+input:focus:-ms-input-placeholder
+{
     color: dodgerblue;
 }
 
-input:focus:-ms-input-placeholder {
-    color: dodgerblue;
-}
 
-#registerLink {
-    color: black;
-    text-align: right;
-    margin-top: 15px;
-}
-
-.formFields {
-    float: right;
-    clear: both;
-}

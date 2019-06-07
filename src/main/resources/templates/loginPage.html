@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sign in</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/cssStyles.css">
+</head>
+<body>
+<div class="custom-padding">
+    <nav>
+        <div class="logo1">BlueBus</div>
+        <ul class="menu-area">
+            <li><a href="/">Home</a></li>
+            <li><a href="/searchConnections">find connection</a></li>
+            <li><a href="/login">login</a></li>
+        </ul>
+    </nav>
+</div>
+<div id="container">
+    <form action="/login" method="post">
+
+        <input type="text" placeholder="login" name="username" id="username" onfocus="this.placeholder=''" onblur="this.placeholder='login'">
+
+        <input type="password" placeholder="password" name="password" id="password" onfocus="this.placeholder=''" onblur="this.placeholder='password'">
+
+        <input type="submit" value="login in">
+
+    </form>
+
+    <div id="registerLink">don't have an account? Register <a href="/RegisterForm">here</a></div>
+</div>
+</body>
+</html>

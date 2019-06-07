@@ -1,6 +1,9 @@
 $(function () {
 
-    const ticketAdress = "http://localhost:8080/buyTicket/";
+    const basicURL = "http://localhost:8080";
+    const buyTicket ="/buyTicket/";
+    const getRailways ="/getRailways";
+    const getConnections ="/getConnections";
     function resetTr() {
         let trToRemove = $('#results tr').siblings('tr');
         trToRemove.each(function () {
@@ -32,9 +35,8 @@ $(function () {
     }
 
     function ajaxDropdownList() {
-        $.ajax({
-            type: 'GET',
-            url: 'http://localhost:8080/getRailways',
+        $.get({
+            url: basicURL.concat(getRailways),
             contentType: 'application/json',
         }).done(function (jsons) {
             jsons.forEach(function (json) {
@@ -49,9 +51,8 @@ $(function () {
     }
 
     function ajaxDropdownList2() {
-        $.ajax({
-            type: 'GET',
-            url: 'http://localhost:8080/getRailways',
+        $.get({
+            url: basicURL.concat(getRailways),
             contentType: 'application/json',
         }).done(function (jsons) {
             jsons.forEach(function (json) {
@@ -70,9 +71,9 @@ $(function () {
         dateFormat: 'dd/mm/yy'
     }).datepicker("setDate", new Date());
 
-    ajaxDropdownList2()
+    ajaxDropdownList2();
 
-    ajaxDropdownList()
+    ajaxDropdownList();
 
     $('#DestinationPointList').selectmenu({ width : 400});
 
@@ -84,9 +85,8 @@ $(function () {
         let StartPoint = getSelectedStartPoint();
         let endPoint = getSelectedEndPoint();
 
-        $.ajax({
-            type:'POST',
-            url:'http://localhost:8080/getConnections',
+        $.post({
+            url:basicURL.concat(getConnections),
             contentType:'application/json',
             data:JSON.stringify({
                 "startPoint":{"city":getCity(StartPoint)
@@ -123,7 +123,7 @@ $(function () {
                 });
                 const column6 = $("<td>", {
                     class: "ticketLink",
-                    html: "<a href=" + ticketAdress + index.busId + ">buy ticket</a>"
+                    html: "<a href=" + basicURL.concat(buyTicket) + index.busId + ">buy ticket</a>"
                 });
                 $('#results')
                     .append(row
@@ -136,8 +136,8 @@ $(function () {
                     )
             });
 
-        }).fail(function (e) {
-            console.log(e)
+        }).fail(function (fail) {
+            console.log(fail)
         })
     })
 });

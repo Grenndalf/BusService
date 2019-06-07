@@ -15,7 +15,7 @@ public class ViewsController {
 
     @RequestMapping("/searchConnections")
     public String connections() {
-        return "DropDownList";
+        return "connections";
     }
 
     @RequestMapping ( "/yourTicket" )
@@ -25,17 +25,27 @@ public class ViewsController {
 
     @RequestMapping ( "/AdminPanel" )
     public String AdminTools() {
-        return "AdminPanel";
+        return "adminPanel";
     }
 
     @RequestMapping ( "/UserPanel" )
     public String UserTools() {
-        return "UserPanel";
+        return "userPanel";
     }
 
     @RequestMapping ( "/" )
     public String MainPage() {
-        return "MainPage";
+        return "mainPage";
+    }
+
+    @RequestMapping ( "/login" )
+    public String LoginPage() {
+        return "loginPage";
+    }
+
+    @RequestMapping ( "/logError" )
+    public String LoginErrorPage() {
+        return "loginErrorPage";
     }
 
     @RequestMapping ( "/default" )

@@ -3,20 +3,8 @@
 <head>
     <title>Registration Form</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" >
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/cssStyles.css">
-    <style>
-        .logo1 {
-            width: 15%;
-            float: left;
-            color: #fff;
-            font-size: 25px;
-            text-align: left;
-            padding-left: 2%;
-            margin-top: -5px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../static/css/register.css">
+
 </head>
 <body>
 <div class="custom-padding">
@@ -25,87 +13,63 @@
         <ul class="menu-area">
             <li><a href="/">Home</a></li>
             <li><a href="/searchConnections">find connection</a></li>
+            <li><a href="/login">login</a></li>
         </ul>
     </nav>
 </div>
 <div style="height: 30px"></div>
 <div class="container" id="containerMods">
-    <h1>Enter your data:</h1>
+    <h2>Enter your data:</h2>
     <form id="form" method="post">
-        <div class="row">
-            <div class="col-xs-4 col-sm-offset-4">
-                <label for="login">login:</label><input type="text"
-                                            name="login"
-                                            class="form-control"
-                                            id="login"
-                                            value="" placeholder="Your login">
 
+        <div class="formFields">
+            <input type="text"
+                   name="login"
+                   id="login"
+                   value="" placeholder="Your login">
             </div>
-        </div>
         <div style="height: 15px"></div>
-        <div class="row">
-            <div class="col-xs-4 col-sm-offset-4">
-                <label for="firstName">first name:</label><input type="text"
-                                               name="firstName"
-                                               class="form-control"
-                                               id="firstName"
-                                               value="" placeholder="your first name"/>
+        <div class="formFields">
+                <input type="text"
+                       name="firstName"
+                       id="firstName"
+                       value="" placeholder="your first name"/>
             </div>
-        </div>
         <div style="height: 15px"></div>
-        <div class="row">
-            <div class="col-xs-4 col-sm-offset-4">
-                <label for="lastName">last name:</label><input type="text"
-                                              name="lastName"
-                                              class="form-control"
-                                              id="lastName"
-                                              value="" placeholder="Your last Name">
-
+        <div class="formFields">
+                <input type="text"
+                       name="lastName"
+                       id="lastName"
+                       value="" placeholder="Your last Name">
             </div>
-        </div>
         <div style="height: 15px"></div>
-        <div class="row">
-            <div class="col-xs-4 col-sm-offset-4">
-                <label for="password">password:</label><input type="password"
-                                              name="password"
-                                              class="form-control"
-                                              id="password"
-                                              value="" placeholder="Your password">
-
+        <div class="formFields">
+                <input type="password"
+                       id="password"
+                       value="" placeholder="Your password">
             </div>
-        </div>
         <div style="height: 15px"></div>
-            <div class="row">
-                <div class="col-xs-4 col-sm-offset-4">
-                    <label for="confirmPassword">confirm password:</label><input type="password"
-                                                          name="confirmPassword"
-                                                          class="form-control"
-                                                          id="confirmPassword"
-                                                          value="" placeholder="Your password">
-
+        <div class="formFields">
+                    <input type="password"
+                           name="confirmPassword"
+                           id="confirmPassword"
+                           value="" placeholder="Your password">
                 </div>
-            </div>
         <div style="height: 15px"></div>
-            <div class="row">
-                <div class="col-xs-4 col-sm-offset-4">
-                    <label for="email">email</label><input type="email"
-                                                          class="form-control"
-                                                          id="email"
-                                                          value="" placeholder="enter your email">
+        <div class="formFields">
+                    <input type="email"
+                           id="email"
+                           value="" placeholder="enter your email">
                 </div>
-            </div>
         <div style="height: 30px"></div>
-        <div class="row">
-            <div class="col-xs-4 col-sm-offset-4">
-                <button class="btn btn-primary btn-block">Submit data</button>
+        <div class="formFields">
+            <input type="submit" value="Submit">
             </div>
-        </div>
     </form>
 </div>
 <div style="clear: both"></div>
 <footer id="someFooter"></footer>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../static/js/register.js"></script>
 <script type="text/javascript" src="../static/js/registerValidator.js"></script>
 </body>

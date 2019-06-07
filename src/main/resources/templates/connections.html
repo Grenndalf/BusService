@@ -1,0 +1,136 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Find your Travel</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/cssStyles.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/themes/ui-lightness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+
+        .ui-datepicker {
+            background: lightyellow;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+            width: 300px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: aliceblue;
+        }
+
+        .menu-area li a {
+            text-decoration: none;
+        }
+
+        .menu-area li {
+            list-style-type: none;
+        }
+
+        nav {
+            height: 50px;
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            background: dodgerblue;
+            z-index: 1;
+            text-align: right;
+            padding: 10px 2% 10px 0;
+        }
+
+        .logo1 {
+            width: 15%;
+            float: left;
+            color: #fff;
+            font-size: 25px;
+            text-align: left;
+            padding-left: 2%;
+            margin-top: -5px;
+        }
+
+        .menu-area li {
+            display: inline-block;
+        }
+
+        .menu-area a {
+            color: #fff;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: block;
+            padding: 0 25px;
+            font-size: 14px;
+            line-height: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .menu-area a:hover {
+            background: tomato;
+            color: #fff;
+        }
+        table{
+            margin-top: 10px;
+        }
+        tr:nth-child(odd) {background: white;}
+        tr:nth-child(even) {background: #EFEFEF;}
+    </style>
+</head>
+<body>
+<div class="custom-padding">
+    <nav>
+        <div class="logo1">BlueBus</div>
+        <ul class="menu-area">
+            <li><a href="/">Home</a></li>
+            <li><a href="/searchConnections">find connection</a></li>
+            <li><a href="/login">login</a></li>
+        </ul>
+    </nav>
+</div>
+<div id="secondHeader">
+    <p class="announcement">Find your Travel</p>
+</div>
+<div class="line"></div>
+<div class= "formStyling">
+<form id="sendMe" >
+    <label style="margin-left: 30px"><b>Travel from:</b></label>
+    <select id="StartPointList">
+        <option disabled="true">Select start Point</option>
+    </select>
+    <label id="labelBreak"><b>Travel To:</b></label>
+    <select id="DestinationPointList">
+        <option disabled="true">Select destination Point</option>
+    </select>
+    <label>Travel Day:</label>
+    <input type="text" id="TravelDate" autocomplete="off">
+    <button class="btn btn-primary" style="margin-left: auto;margin-right: auto; width: 120px ">Submit</button>
+</form>
+</div>
+<table class="table table-striped" id="results">
+    <thead class="thead-dark">
+    <tr id="header">
+        <th scope="col">Departure Railway Station</th>
+        <th scope="col">Target Railway Station </th>
+        <th>Date</th>
+        <th>Departure Time</th>
+        <th>Seats available</th>
+        <th>buy Ticket</th>
+    </tr>
+</table>
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+        integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="../static/js/DropDown.js"></script>
+</body>
+</html>

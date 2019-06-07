@@ -1,5 +1,9 @@
 $(document).ready(function () {
-
+    const basicURL = "http://localhost:8080";
+    const getData = "/getData";
+    const getUser = "/getUser";
+    const seats ="/seats";
+    const purchase = "/TicketPurchase";
     function resetComment() {
         let trToRemove = $('.comment');
         trToRemove.each(function () {
@@ -9,10 +13,9 @@ $(document).ready(function () {
 
     function TicketInfo() {
         $.get({
-            url: 'http://localhost:8080/getData',
+            url: basicURL.concat(getData),
             contentType: 'application/json',
         }).done(function (railways) {
-            console.log(railways)
             $('#destination').html("<b>" + railways.endPoint.city + "</b>" + ", " + railways.endPoint.railwayAddress);
             $('#startPoint').html("<b>" + railways.startPoint.city + "</b>" + ", " + railways.startPoint.railwayAddress);
             $('#travelDate').html(railways.travelDate);
@@ -22,7 +25,7 @@ $(document).ready(function () {
         });
 
         $.get({
-            url: 'http://localhost:8080/getUser',
+            url: basicURL.concat(getUser),
             contentType: 'application/json',
         }).done(function (user) {
             $('#firstName').html(user.firstName);
@@ -30,9 +33,7 @@ $(document).ready(function () {
         }).fail(function (fail) {
         })
     }
-
     TicketInfo();
-
     function resetSeat() {
         let trToRemove = $('.seat');
         trToRemove.each(function () {
@@ -42,7 +43,7 @@ $(document).ready(function () {
 
     function getSeats() {
         $.get({
-            url: 'http://localhost:8080/seats',
+            url: basicURL.concat(seats),
             contentType: 'application/json',
         }).done(function (seatList) {
             seatList.forEach(function (elem) {
@@ -54,15 +55,12 @@ $(document).ready(function () {
             });
         });
     }
-
     getSeats();
-
     $('#spotSelect').submit(function (p) {
-
         p.preventDefault();
         let seat = $(':selected').val();
         $.post({
-            url: 'http://localhost:8080/TicketPurchase',
+            url: basicURL.concat(purchase),
             contentType: 'application/json',
             data: JSON.stringify(seat)
         }).done(function () {

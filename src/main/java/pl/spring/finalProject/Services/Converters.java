@@ -17,6 +17,13 @@ public class Converters {
         announcements.setContent(announcementsDTO.getContent());
         return announcements;
     }
+    public static AnnouncementsDTO convertAnnouncement(Announcements announcements) {
+        AnnouncementsDTO announcementsDTO = new AnnouncementsDTO();
+        announcementsDTO.setTitle(announcements.getTitle());
+        announcementsDTO.setContent(announcements.getContent());
+        announcementsDTO.setCreatedAt(announcements.getCreatedAt());
+        return announcementsDTO;
+    }
 
     public static RailwaysDTO convertRailways(Railways railways) {
         RailwaysDTO railwaysDTO = new RailwaysDTO();

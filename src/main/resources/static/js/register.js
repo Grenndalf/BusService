@@ -28,26 +28,8 @@ $(document).ready(function () {
         return selector.val();
     }
 
-    function passwordValidator() {
-        if (getVal($('#password')) !== getVal($('#confirmPassword'))) {
-            resetComment();
-            const comment1 = $("<p>", {
-                id: "comm2",
-                class: "comment",
-                text: "passwords are not the same!"
-            });
-            form.append(comment1);
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     form.submit(function (sendForm) {
         sendForm.preventDefault();
-        if (passwordValidator()) {
-            return;
-        }
         let travelerDTO = new inputs(
             getVal(login),
             getVal(firstName),
@@ -61,7 +43,7 @@ $(document).ready(function () {
             contentType: 'application/json'
         }).done(function () {
             resetComment();
-            window.location.replace(basicURL.concat(userPanel));
+            window.location.href="/";
         }).fail(function () {
             resetComment();
             const comment = $("<p>", {

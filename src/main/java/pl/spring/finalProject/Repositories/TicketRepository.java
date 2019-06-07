@@ -35,7 +35,7 @@ public interface TicketRepository extends JpaRepository<Ticket, Long> {
     List<ReturnTicketsOfChosenTravelerDTO> findTicketsOfChosenTraveler(String login);
 
     @Modifying
-    @Query ( value = "Update ticket t join traveler  tr on t.ticket_owner=tr.id set t.ticket_owner=NULL where t.id=?1 and tr.login=?2",nativeQuery = true)
-    void removeUserFromTicket(long ticketId,String login);
+    @Query ( value = "UPDATE ticket SET ticket_owner=NULL FROM traveler WHERE ticket.ticket_owner=traveler.id and ticket.id=?1 and traveler.login=?2" ,nativeQuery =true)
+    void removeUserFromTicket(long ticketId, String login);
 
 }

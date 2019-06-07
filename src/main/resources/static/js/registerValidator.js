@@ -25,15 +25,16 @@ $(document).ready(function () {
                 equalTo: "#password"
             },
             email: {
-                required: "this field is required",
-                email: "please "
+
+                required: requiredFieldText,
+                email: "please insert a proper email address"
             },
         },
         messages: {
             login: {
                 required: requiredFieldText,
                 minlength: "login has to be at least 3 long",
-                maxlength: "login can be max 10 characters long"
+                maxlength: "login can be max 10 characters long",
             },
             firstName: {
                 required: requiredFieldText,

@@ -1,12 +1,34 @@
+
+
 $(document).ready(function () {
-    const link = "http://localhost:8080/deleteReservation/";
+    const basicURL = "http://localhost:8080";
+    const deleteReservation = "/deleteReservation/";
+    const getUserLogin = "/getUserLogin";
+    const loginPage ="/login";
+    const userTravels ="/UserTravels";
+    const updateUser ="/updateUser";
+    const userFields ="/userData";
+    const updateFirstName ="/updateUserFirstName";
+    const updateLastName ="/updateUserLastName";
+    const firstNameChangeField =$('#firstNameField');
+    const lastNameChangeField =$('#lastNameField');
+    const firstNameChangeForm = $('#firstNameChangeForm');
+    const lastNameChangeForm = $('#lastNameChangeForm');
+
     const getTravels = $('#travels');
     const getUserData = $('#changeName');
-    let inputs = function (firstName, lastName, email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-    };
+
+    function useDataTableFields(basicURL, userFields) {
+        $.get({
+            url: basicURL.concat(userFields),
+            contentType: 'application/json'
+        }).done(function (e) {
+            $('#firstName').text(e.firstName);
+            $('#lastName').text(e.lastName);
+            $('#email').text(e.email);
+        });
+    }
+
     let userData = $('#UserData');
 
     function getVal(selector) {
@@ -36,7 +58,6 @@ $(document).ready(function () {
         const column4 = $("<th>", {
             class: "travelTime",
             html: "<b>" + "Travel time" + "</b>"
-
         });
         const column5 = $("<th>", {
             class: "seatNumber",
@@ -57,18 +78,18 @@ $(document).ready(function () {
     }
 
     $.get({
-        url: 'http://localhost:8080/getUserLogin'
+        url: basicURL.concat(getUserLogin)
     }).done(function (e) {
         $('#welcome').html("<h2>welcome " + e + "</h2>")
     }).fail(function () {
-        window.location.replace("http://localhost:8080/login");
+        window.location.replace(basicURL.concat(loginPage));
     });
 
     function getTickets() {
         $.get({
-            url: "http://localhost:8080/UserTravels"
+            url: basicURL.concat(userTravels)
         }).done(function (result) {
-            createTicketTable()
+            createTicketTable();
             result.forEach(function (index) {
                 const row = $("<tr>", {
                     class: "result",
@@ -111,17 +132,15 @@ $(document).ready(function () {
                 event.preventDefault();
                 let ticket = $(this).attr('href');
                 $.post({
-                    url: link,
+                    url: basicURL.concat(deleteReservation),
                     contentType: 'application/json',
                     data: JSON.stringify(ticket)
                 }).done(function () {
                     removeTicketTable();
                     getTickets();
-                    console.log("hurrra!")
-                }).fail(function () {
-                    console.log("not hurra :(")
+                }).fail(function (fail) {
+                    console.log(fail)
                 })
-
             })
         })
     }
@@ -131,50 +150,75 @@ $(document).ready(function () {
     }
 
     getTravels.click(function () {
+        userData.hide();
         removeTicketTable();
         getTickets();
-        hideData()
     });
     getUserData.click(function () {
         removeTicketTable();
-        let travelerDTO = new inputs(
-            getVal($('#changeFirstName')),
-            getVal($('#changeLastName')),
-            getVal($('#changeEmail')));
-
-        hideData();
+        userData.show()
         });
-    function hideData() {
-        if (userData.is(':hidden')) {
-            userData.show()
-        } else {
-            userData.hide()
-        }
-    }
-    $('#DataChange').submit(function () {
-        let travelerDTO = new inputs(
-            getVal($('#changeFirstName')),
-            getVal($('#changeLastName')),
-            getVal($('#changeEmail')));
-        $.ajax({
-            type: 'POST',
-            url: 'http://localhost:8080/updateUser',
-            data: JSON.stringify(travelerDTO),
-            contentType: 'application/json'
-        }).done(function (e) {
-            console.log(e)
+
+    useDataTableFields(basicURL, userFields);
+
+    firstNameChangeForm.submit(function (send) {
+        send.preventDefault();
+        let firstName = getVal(firstNameChangeField);
+        $.post({
+            url:basicURL.concat(updateFirstName),
+            contentType: "application/json",
+            data: JSON.stringify(firstName)
+        }).done(function () {
+            resetComment();
+            const comment = $("<p>", {
+                id: "comm1",
+                class: "comment",
+                text: "First name changed successfully"
+            });
+            firstNameChangeForm.append(comment);
+            useDataTableFields(basicURL, userFields);
+        }).fail(function () {
+            resetComment();
+            const comment = $("<p>", {
+                id: "comm2",
+                class: "comment",
+                text: "First name has been NOT changed" +
+                    " - 3 to 10 letters ONLY!"
+            });
+            firstNameChangeForm.append(comment);
         })
-    })
-
-    $.get({
-        url: 'http://localhost:8080/userData'
-    }).done(function (e) {
-        $('#firstName').text(e.firstName);
-        $('#lastName').text(e.lastName);
-        $('#email').text(e.email);
-
-        $('#changeFirstName').val(e.firstName);
-        $('#changeLastName').val(e.lastName);
-        $('#changeEmail').val(e.email);
     });
+    lastNameChangeForm.submit(function (send) {
+        send.preventDefault();
+        let lastName = getVal(lastNameChangeField);
+        $.post({
+            url:basicURL.concat(updateLastName),
+            contentType: "application/json",
+            data: JSON.stringify(lastName)
+        }).done(function () {
+            resetComment();
+            const comment = $("<p>", {
+                id: "comm1",
+                class: "comment",
+                text: "Last name changed successfully"
+            });
+            lastNameChangeForm.append(comment);
+            useDataTableFields(basicURL, userFields);
+        }).fail(function () {
+            resetComment();
+            const comment = $("<p>", {
+                id: "comm2",
+                class: "comment",
+                text: "Last name has been NOT changed" +
+                    " - 3 to 10 letters ONLY!"
+            });
+            lastNameChangeForm.append(comment);
+        })
+    });
+    function resetComment() {
+        let commentToRemove = $('.comment');
+        commentToRemove.each(function () {
+            $(this).remove()
+        })
+    }
 });

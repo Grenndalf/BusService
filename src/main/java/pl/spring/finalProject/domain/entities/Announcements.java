@@ -1,16 +1,14 @@
 package pl.spring.finalProject.domain.entities;
 
 import lombok.*;
-
+import org.hibernate.validator.constraints.Length;
 import javax.persistence.*;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @Entity
 @Table
-//        (uniqueConstraints={@UniqueConstraint(columnNames = {"end_point_id","start_point_id"})})
 @Getter
 @Setter
 @NoArgsConstructor
@@ -23,10 +21,12 @@ public class Announcements {
 
     @NotNull
     @NotBlank
+    @Length ( max = 150 )
     private String title;
 
     @NotNull
     @NotBlank
+    @Length ( max = 1500 )
     @Column(columnDefinition="TEXT")
     private String content;
 

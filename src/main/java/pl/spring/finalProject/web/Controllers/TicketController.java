@@ -49,13 +49,12 @@ public class TicketController {
     @RequestMapping ( "/UserTravels" )
     @ResponseBody
     public List<ReturnTicketsOfChosenTravelerDTO> userReservations(@NotNull Principal principal) {
-
         return ticketService.findTicketsOfChosenTraveler(principal.getName());
     }
 
     @RequestMapping ( "/deleteReservation" )
     public ResponseEntity<String> removeUserFromTicket(@RequestBody int ticket, Principal principal) {
         ticketService.removeUserFromTicket(ticket,principal.getName());
-        return ResponseEntity.ok("tadammm");
+        return ResponseEntity.ok("OK");
     }
 }

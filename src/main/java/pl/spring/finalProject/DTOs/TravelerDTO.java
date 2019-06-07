@@ -4,13 +4,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import pl.spring.finalProject.Services.validationGroup;
 
 import javax.persistence.Column;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import javax.validation.groups.Default;
 
 @Getter
@@ -18,21 +14,19 @@ import javax.validation.groups.Default;
 @NoArgsConstructor
 @ToString
 public class TravelerDTO {
+    @Pattern ( regexp ="^(?=.*[A-Za-z0-9]$)[A-Za-z][A-Za-z\\d.-]{3,10}$",message = "length has to be between 3 and 10 and contains only letters and digits"  )
     @Column (unique = true, nullable = false)
-    @NotNull(message = "can not be empty")
-    @Size(min = 3, max = 10,message = "length has to be between 3 and 10")
     private String login;
-    @NotNull(message = "can not be empty",groups = validationGroup.class)
-    @Size(min = 3, max = 10, message = "length has to be between 3 and 10",groups = {validationGroup.class, Default.class})
+    @Pattern ( regexp ="[A-Za-z]{3,10}$", message = "length has to be between 3 and 10 and contains only letters" )
     private String firstName;
-    @NotNull(message = "can not be empty",groups = validationGroup.class)
-    @Size(min = 3, max = 10, message = "length has to be between 3 and 10",groups = {validationGroup.class, Default.class})
+    @Pattern ( regexp ="[A-Za-z]{3,10}$",  message = "length has to be between 3 and 10 and contains only letters")
     private String lastName;
     @NotNull(message = "can not be empty")
     @NotBlank
     private String password;
+
     @NotBlank
-    @NotNull(groups = {validationGroup.class, Default.class})
-    @Email(groups = {validationGroup.class, Default.class})
+    @NotNull
+    @Email
     private String email;
 }

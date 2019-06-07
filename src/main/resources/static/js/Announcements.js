@@ -1,8 +1,8 @@
 $(function () {
     const basicURL = "http://localhost:8080";
-    const getAnnoucements = "/getAllAnnoucements";
+    const getAnnouncements = "/getAllAnnouncements";
     $.get({
-        url: basicURL.concat(getAnnoucements),
+        url: basicURL.concat(getAnnouncements),
     }).done(function (resultList) {
         //reset pól
         resultList.forEach(function (result) {
@@ -17,7 +17,7 @@ $(function () {
             const content = $("<div>", {
                 class: "content",
                 html: result.content
-            })
+            });
             const lineSeparator = $("<div>", {
                 class: "line2",
             });
